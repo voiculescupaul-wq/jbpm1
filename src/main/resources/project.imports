@@ -1,0 +1,10 @@
+<configuration>
+  <imports>
+    <import>
+      <type>java.lang.String</type>
+    </import>
+    <import>
+      <type>java.lang.Boolean</type>
+    </import>
+  </imports>
+</configuration>

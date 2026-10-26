@@ -1,0 +1,1465 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn2:definitions xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL"
+    xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+    xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
+    xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+    xmlns:drools="http://www.jboss.org/drools"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd"
+    id="_Definitions_flux_petitii" exporter="jBPM Process Modeler" exporterVersion="2.0" targetNamespace="http://www.omg.org/bpmn20">
+  <bpmn2:itemDefinition id="_departamentItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="_decizieDGALItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="_decizieSubdirectieItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="_decizieDirectieItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="_decizieCabinetItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="_decizieSemnareItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="_solicitantItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="_opinieDGALItem" structureRef="Boolean"/>
+  <bpmn2:itemDefinition id="_opinieSRUEItem" structureRef="Boolean"/>
+  <bpmn2:itemDefinition id="_opinieSAITCItem" structureRef="Boolean"/>
+  <bpmn2:itemDefinition id="_opinieSJCREPItem" structureRef="Boolean"/>
+  <bpmn2:itemDefinition id="_Task_Inregistrare_TaskNameInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Task_Inregistrare_GroupIdInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Task_Inregistrare_SkippableInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Task_Inregistrare_departamentOutputXItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="_Task_DGAL_TaskNameInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Task_DGAL_GroupIdInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Task_DGAL_SkippableInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Task_DGAL_decizieDGALOutputXItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="_Task_DGAL_decizieDirectieOutputXItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="_Task_DGAL_departamentOutputXItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="_Task_DGAL_solicitantOutputXItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="_Task_DGAL_opinieDGALOutputXItem" structureRef="Boolean"/>
+  <bpmn2:itemDefinition id="_Task_DGAL_opinieSRUEOutputXItem" structureRef="Boolean"/>
+  <bpmn2:itemDefinition id="_Task_DGAL_opinieSAITCOutputXItem" structureRef="Boolean"/>
+  <bpmn2:itemDefinition id="_Task_DGAL_opinieSJCREPOutputXItem" structureRef="Boolean"/>
+  <bpmn2:itemDefinition id="_Task_DAL_TaskNameInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Task_DAL_GroupIdInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Task_DAL_SkippableInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Task_DAL_decizieSubdirectieOutputXItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="_Task_SRMRI_TaskNameInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Task_SRMRI_GroupIdInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Task_SRMRI_SkippableInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Task_SRMRI_decizieSubdirectieOutputXItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="_Task_PCUEL_TaskNameInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Task_PCUEL_GroupIdInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Task_PCUEL_SkippableInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Task_PCUEL_decizieSubdirectieOutputXItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="_Task_SRUE_TaskNameInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Task_SRUE_GroupIdInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Task_SRUE_SkippableInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Task_SRUE_decizieDirectieOutputXItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="_Task_SRUE_departamentOutputXItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="_Task_SRUE_solicitantOutputXItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="_Task_SRUE_opinieDGALOutputXItem" structureRef="Boolean"/>
+  <bpmn2:itemDefinition id="_Task_SRUE_opinieSRUEOutputXItem" structureRef="Boolean"/>
+  <bpmn2:itemDefinition id="_Task_SRUE_opinieSAITCOutputXItem" structureRef="Boolean"/>
+  <bpmn2:itemDefinition id="_Task_SRUE_opinieSJCREPOutputXItem" structureRef="Boolean"/>
+  <bpmn2:itemDefinition id="_Task_SAITC_TaskNameInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Task_SAITC_GroupIdInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Task_SAITC_SkippableInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Task_SAITC_decizieDirectieOutputXItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="_Task_SAITC_departamentOutputXItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="_Task_SAITC_solicitantOutputXItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="_Task_SAITC_opinieDGALOutputXItem" structureRef="Boolean"/>
+  <bpmn2:itemDefinition id="_Task_SAITC_opinieSRUEOutputXItem" structureRef="Boolean"/>
+  <bpmn2:itemDefinition id="_Task_SAITC_opinieSAITCOutputXItem" structureRef="Boolean"/>
+  <bpmn2:itemDefinition id="_Task_SAITC_opinieSJCREPOutputXItem" structureRef="Boolean"/>
+  <bpmn2:itemDefinition id="_Task_SJCREP_TaskNameInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Task_SJCREP_GroupIdInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Task_SJCREP_SkippableInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Task_SJCREP_decizieDirectieOutputXItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="_Task_SJCREP_departamentOutputXItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="_Task_SJCREP_solicitantOutputXItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="_Task_SJCREP_opinieDGALOutputXItem" structureRef="Boolean"/>
+  <bpmn2:itemDefinition id="_Task_SJCREP_opinieSRUEOutputXItem" structureRef="Boolean"/>
+  <bpmn2:itemDefinition id="_Task_SJCREP_opinieSAITCOutputXItem" structureRef="Boolean"/>
+  <bpmn2:itemDefinition id="_Task_SJCREP_opinieSJCREPOutputXItem" structureRef="Boolean"/>
+  <bpmn2:itemDefinition id="_Op_DGAL_TaskNameInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Op_DGAL_GroupIdInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Op_DGAL_SkippableInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Op_SRUE_TaskNameInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Op_SRUE_GroupIdInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Op_SRUE_SkippableInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Op_SAITC_TaskNameInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Op_SAITC_GroupIdInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Op_SAITC_SkippableInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Op_SJCREP_TaskNameInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Op_SJCREP_GroupIdInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Op_SJCREP_SkippableInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Task_Alte_TaskNameInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Task_Alte_GroupIdInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Task_Alte_SkippableInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Task_Cabinet_TaskNameInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Task_Cabinet_GroupIdInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Task_Cabinet_SkippableInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Task_Cabinet_decizieCabinetOutputXItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="_Task_Cabinet_departamentOutputXItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="_Task_Conducere_TaskNameInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Task_Conducere_GroupIdInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Task_Conducere_SkippableInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Task_Semnare_TaskNameInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Task_Semnare_GroupIdInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Task_Semnare_SkippableInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Task_Semnare_decizieSemnareOutputXItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="_Task_Semnare_departamentOutputXItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="_Task_Expediere_TaskNameInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Task_Expediere_GroupIdInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Task_Expediere_SkippableInputXItem" structureRef="Object"/>
+  <bpmn2:process id="flux_formular_petitii" drools:packageName="ro.gov.oli.petitii" drools:version="1.0" drools:adHoc="false" name="Flux Formular Petiții" isExecutable="true" processType="Public">
+    <bpmn2:documentation><![CDATA[Variabile de decizie:
+ departament     = DGAL | SRUE | SAITC | SJCREP | ALTE   (repartizare / transfer / redistribuire)
+ decizieDGAL     = DAL | SRMRI | PCUEL | NICIUNA
+ decizieDirectie = RASPUNS | TRANSFER | OPINIE
+ solicitant      = direcția care cere opinii; opinieDGAL/opinieSRUE/opinieSAITC/opinieSJCREP = true/false
+ decizieCabinet  = CONDUCERE | REDISTRIBUIRE]]></bpmn2:documentation>
+    <bpmn2:extensionElements><drools:import name="java.lang.String"/></bpmn2:extensionElements>
+    <bpmn2:property id="departament" itemSubjectRef="_departamentItem" name="departament"/>
+    <bpmn2:property id="decizieDGAL" itemSubjectRef="_decizieDGALItem" name="decizieDGAL"/>
+    <bpmn2:property id="decizieSubdirectie" itemSubjectRef="_decizieSubdirectieItem" name="decizieSubdirectie"/>
+    <bpmn2:property id="decizieDirectie" itemSubjectRef="_decizieDirectieItem" name="decizieDirectie"/>
+    <bpmn2:property id="decizieCabinet" itemSubjectRef="_decizieCabinetItem" name="decizieCabinet"/>
+    <bpmn2:property id="decizieSemnare" itemSubjectRef="_decizieSemnareItem" name="decizieSemnare"/>
+    <bpmn2:property id="solicitant" itemSubjectRef="_solicitantItem" name="solicitant"/>
+    <bpmn2:property id="opinieDGAL" itemSubjectRef="_opinieDGALItem" name="opinieDGAL"/>
+    <bpmn2:property id="opinieSRUE" itemSubjectRef="_opinieSRUEItem" name="opinieSRUE"/>
+    <bpmn2:property id="opinieSAITC" itemSubjectRef="_opinieSAITCItem" name="opinieSAITC"/>
+    <bpmn2:property id="opinieSJCREP" itemSubjectRef="_opinieSJCREPItem" name="opinieSJCREP"/>
+    <bpmn2:startEvent id="StartEvent_1" name="Petiție primită">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname"><drools:metaValue><![CDATA[Petiție primită]]></drools:metaValue></drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:outgoing>Flow_01</bpmn2:outgoing>
+    </bpmn2:startEvent>
+    <bpmn2:userTask id="Task_Inregistrare" name="Înregistrare petiție (PCUEL / Site OLI)">
+      <bpmn2:documentation><![CDATA[departament: DGAL | SRUE | SAITC | SJCREP | ALTE]]></bpmn2:documentation>
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname"><drools:metaValue><![CDATA[Înregistrare petiție (PCUEL / Site OLI)]]></drools:metaValue></drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>Flow_01</bpmn2:incoming>
+      <bpmn2:outgoing>Flow_02</bpmn2:outgoing>
+      <bpmn2:ioSpecification id="Task_Inregistrare_io">
+        <bpmn2:dataInput id="Task_Inregistrare_TaskNameInputX" drools:dtype="Object" itemSubjectRef="_Task_Inregistrare_TaskNameInputXItem" name="TaskName"/>
+        <bpmn2:dataInput id="Task_Inregistrare_GroupIdInputX" drools:dtype="Object" itemSubjectRef="_Task_Inregistrare_GroupIdInputXItem" name="GroupId"/>
+        <bpmn2:dataInput id="Task_Inregistrare_SkippableInputX" drools:dtype="Object" itemSubjectRef="_Task_Inregistrare_SkippableInputXItem" name="Skippable"/>
+        <bpmn2:dataOutput id="Task_Inregistrare_departamentOutputX" drools:dtype="String" itemSubjectRef="_Task_Inregistrare_departamentOutputXItem" name="departament"/>
+        <bpmn2:inputSet id="Task_Inregistrare_InputSet">
+          <bpmn2:dataInputRefs>Task_Inregistrare_TaskNameInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>Task_Inregistrare_GroupIdInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>Task_Inregistrare_SkippableInputX</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="Task_Inregistrare_OutputSet">
+          <bpmn2:dataOutputRefs>Task_Inregistrare_departamentOutputX</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="Task_Inregistrare_dia1">
+        <bpmn2:targetRef>Task_Inregistrare_TaskNameInputX</bpmn2:targetRef>
+        <bpmn2:assignment id="Task_Inregistrare_as1"><bpmn2:from xsi:type="bpmn2:tFormalExpression" id="Task_Inregistrare_fr1"><![CDATA[Inregistrare]]></bpmn2:from><bpmn2:to xsi:type="bpmn2:tFormalExpression" id="Task_Inregistrare_to1"><![CDATA[Task_Inregistrare_TaskNameInputX]]></bpmn2:to></bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="Task_Inregistrare_dia2">
+        <bpmn2:targetRef>Task_Inregistrare_GroupIdInputX</bpmn2:targetRef>
+        <bpmn2:assignment id="Task_Inregistrare_as2"><bpmn2:from xsi:type="bpmn2:tFormalExpression" id="Task_Inregistrare_fr2"><![CDATA[registratura]]></bpmn2:from><bpmn2:to xsi:type="bpmn2:tFormalExpression" id="Task_Inregistrare_to2"><![CDATA[Task_Inregistrare_GroupIdInputX]]></bpmn2:to></bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="Task_Inregistrare_dia3">
+        <bpmn2:targetRef>Task_Inregistrare_SkippableInputX</bpmn2:targetRef>
+        <bpmn2:assignment id="Task_Inregistrare_as3"><bpmn2:from xsi:type="bpmn2:tFormalExpression" id="Task_Inregistrare_fr3"><![CDATA[false]]></bpmn2:from><bpmn2:to xsi:type="bpmn2:tFormalExpression" id="Task_Inregistrare_to3"><![CDATA[Task_Inregistrare_SkippableInputX]]></bpmn2:to></bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="Task_Inregistrare_doa1">
+        <bpmn2:sourceRef>Task_Inregistrare_departamentOutputX</bpmn2:sourceRef>
+        <bpmn2:targetRef>departament</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+    </bpmn2:userTask>
+    <bpmn2:exclusiveGateway id="Gw_Repart_Join" name="" gatewayDirection="Converging">
+      <bpmn2:incoming>Flow_02</bpmn2:incoming>
+      <bpmn2:incoming>Flow_Dir_Transfer</bpmn2:incoming>
+      <bpmn2:incoming>Flow_OpB2</bpmn2:incoming>
+      <bpmn2:incoming>Flow_C_Redist</bpmn2:incoming>
+      <bpmn2:incoming>Flow_Sem_Ret</bpmn2:incoming>
+      <bpmn2:outgoing>Flow_03</bpmn2:outgoing>
+    </bpmn2:exclusiveGateway>
+    <bpmn2:exclusiveGateway id="Gw_Repart" name="Repartizare pe direcții" gatewayDirection="Diverging" default="Flow_R_Alte">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname"><drools:metaValue><![CDATA[Repartizare pe direcții]]></drools:metaValue></drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>Flow_03</bpmn2:incoming>
+      <bpmn2:outgoing>Flow_R_DGAL</bpmn2:outgoing>
+      <bpmn2:outgoing>Flow_R_SRUE</bpmn2:outgoing>
+      <bpmn2:outgoing>Flow_R_SAITC</bpmn2:outgoing>
+      <bpmn2:outgoing>Flow_R_SJCREP</bpmn2:outgoing>
+      <bpmn2:outgoing>Flow_R_Alte</bpmn2:outgoing>
+    </bpmn2:exclusiveGateway>
+    <bpmn2:exclusiveGateway id="Gw_DGAL_In" name="" gatewayDirection="Converging">
+      <bpmn2:incoming>Flow_R_DGAL</bpmn2:incoming>
+      <bpmn2:incoming>Flow_S_Inapoi</bpmn2:incoming>
+      <bpmn2:outgoing>Flow_DGAL_In</bpmn2:outgoing>
+    </bpmn2:exclusiveGateway>
+    <bpmn2:userTask id="Task_DGAL" name="Soluționare DGAL">
+      <bpmn2:documentation><![CDATA[decizieDGAL: DAL | SRMRI | PCUEL | SEMNARE | NICIUNA; decizieDirectie: RASPUNS | TRANSFER | OPINIE; departament: direcția țintă la TRANSFER; decizieDirectie=OPINIE: solicitant = direcția curentă, opinieDGAL/opinieSRUE/opinieSAITC/opinieSJCREP = true pentru direcțiile de la care se cere opinie]]></bpmn2:documentation>
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname"><drools:metaValue><![CDATA[Soluționare DGAL]]></drools:metaValue></drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>Flow_DGAL_In</bpmn2:incoming>
+      <bpmn2:outgoing>Flow_10</bpmn2:outgoing>
+      <bpmn2:ioSpecification id="Task_DGAL_io">
+        <bpmn2:dataInput id="Task_DGAL_TaskNameInputX" drools:dtype="Object" itemSubjectRef="_Task_DGAL_TaskNameInputXItem" name="TaskName"/>
+        <bpmn2:dataInput id="Task_DGAL_GroupIdInputX" drools:dtype="Object" itemSubjectRef="_Task_DGAL_GroupIdInputXItem" name="GroupId"/>
+        <bpmn2:dataInput id="Task_DGAL_SkippableInputX" drools:dtype="Object" itemSubjectRef="_Task_DGAL_SkippableInputXItem" name="Skippable"/>
+        <bpmn2:dataOutput id="Task_DGAL_decizieDGALOutputX" drools:dtype="String" itemSubjectRef="_Task_DGAL_decizieDGALOutputXItem" name="decizieDGAL"/>
+        <bpmn2:dataOutput id="Task_DGAL_decizieDirectieOutputX" drools:dtype="String" itemSubjectRef="_Task_DGAL_decizieDirectieOutputXItem" name="decizieDirectie"/>
+        <bpmn2:dataOutput id="Task_DGAL_departamentOutputX" drools:dtype="String" itemSubjectRef="_Task_DGAL_departamentOutputXItem" name="departament"/>
+        <bpmn2:dataOutput id="Task_DGAL_solicitantOutputX" drools:dtype="String" itemSubjectRef="_Task_DGAL_solicitantOutputXItem" name="solicitant"/>
+        <bpmn2:dataOutput id="Task_DGAL_opinieDGALOutputX" drools:dtype="Boolean" itemSubjectRef="_Task_DGAL_opinieDGALOutputXItem" name="opinieDGAL"/>
+        <bpmn2:dataOutput id="Task_DGAL_opinieSRUEOutputX" drools:dtype="Boolean" itemSubjectRef="_Task_DGAL_opinieSRUEOutputXItem" name="opinieSRUE"/>
+        <bpmn2:dataOutput id="Task_DGAL_opinieSAITCOutputX" drools:dtype="Boolean" itemSubjectRef="_Task_DGAL_opinieSAITCOutputXItem" name="opinieSAITC"/>
+        <bpmn2:dataOutput id="Task_DGAL_opinieSJCREPOutputX" drools:dtype="Boolean" itemSubjectRef="_Task_DGAL_opinieSJCREPOutputXItem" name="opinieSJCREP"/>
+        <bpmn2:inputSet id="Task_DGAL_InputSet">
+          <bpmn2:dataInputRefs>Task_DGAL_TaskNameInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>Task_DGAL_GroupIdInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>Task_DGAL_SkippableInputX</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="Task_DGAL_OutputSet">
+          <bpmn2:dataOutputRefs>Task_DGAL_decizieDGALOutputX</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>Task_DGAL_decizieDirectieOutputX</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>Task_DGAL_departamentOutputX</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>Task_DGAL_solicitantOutputX</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>Task_DGAL_opinieDGALOutputX</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>Task_DGAL_opinieSRUEOutputX</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>Task_DGAL_opinieSAITCOutputX</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>Task_DGAL_opinieSJCREPOutputX</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="Task_DGAL_dia1">
+        <bpmn2:targetRef>Task_DGAL_TaskNameInputX</bpmn2:targetRef>
+        <bpmn2:assignment id="Task_DGAL_as1"><bpmn2:from xsi:type="bpmn2:tFormalExpression" id="Task_DGAL_fr1"><![CDATA[DGAL]]></bpmn2:from><bpmn2:to xsi:type="bpmn2:tFormalExpression" id="Task_DGAL_to1"><![CDATA[Task_DGAL_TaskNameInputX]]></bpmn2:to></bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="Task_DGAL_dia2">
+        <bpmn2:targetRef>Task_DGAL_GroupIdInputX</bpmn2:targetRef>
+        <bpmn2:assignment id="Task_DGAL_as2"><bpmn2:from xsi:type="bpmn2:tFormalExpression" id="Task_DGAL_fr2"><![CDATA[dgal]]></bpmn2:from><bpmn2:to xsi:type="bpmn2:tFormalExpression" id="Task_DGAL_to2"><![CDATA[Task_DGAL_GroupIdInputX]]></bpmn2:to></bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="Task_DGAL_dia3">
+        <bpmn2:targetRef>Task_DGAL_SkippableInputX</bpmn2:targetRef>
+        <bpmn2:assignment id="Task_DGAL_as3"><bpmn2:from xsi:type="bpmn2:tFormalExpression" id="Task_DGAL_fr3"><![CDATA[false]]></bpmn2:from><bpmn2:to xsi:type="bpmn2:tFormalExpression" id="Task_DGAL_to3"><![CDATA[Task_DGAL_SkippableInputX]]></bpmn2:to></bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="Task_DGAL_doa1">
+        <bpmn2:sourceRef>Task_DGAL_decizieDGALOutputX</bpmn2:sourceRef>
+        <bpmn2:targetRef>decizieDGAL</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="Task_DGAL_doa2">
+        <bpmn2:sourceRef>Task_DGAL_decizieDirectieOutputX</bpmn2:sourceRef>
+        <bpmn2:targetRef>decizieDirectie</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="Task_DGAL_doa3">
+        <bpmn2:sourceRef>Task_DGAL_departamentOutputX</bpmn2:sourceRef>
+        <bpmn2:targetRef>departament</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="Task_DGAL_doa4">
+        <bpmn2:sourceRef>Task_DGAL_solicitantOutputX</bpmn2:sourceRef>
+        <bpmn2:targetRef>solicitant</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="Task_DGAL_doa5">
+        <bpmn2:sourceRef>Task_DGAL_opinieDGALOutputX</bpmn2:sourceRef>
+        <bpmn2:targetRef>opinieDGAL</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="Task_DGAL_doa6">
+        <bpmn2:sourceRef>Task_DGAL_opinieSRUEOutputX</bpmn2:sourceRef>
+        <bpmn2:targetRef>opinieSRUE</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="Task_DGAL_doa7">
+        <bpmn2:sourceRef>Task_DGAL_opinieSAITCOutputX</bpmn2:sourceRef>
+        <bpmn2:targetRef>opinieSAITC</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="Task_DGAL_doa8">
+        <bpmn2:sourceRef>Task_DGAL_opinieSJCREPOutputX</bpmn2:sourceRef>
+        <bpmn2:targetRef>opinieSJCREP</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+    </bpmn2:userTask>
+    <bpmn2:exclusiveGateway id="Gw_DGAL" name="Decizie DGAL" gatewayDirection="Diverging" default="Flow_D_Direct">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname"><drools:metaValue><![CDATA[Decizie DGAL]]></drools:metaValue></drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>Flow_10</bpmn2:incoming>
+      <bpmn2:outgoing>Flow_D_DAL</bpmn2:outgoing>
+      <bpmn2:outgoing>Flow_D_SRMRI</bpmn2:outgoing>
+      <bpmn2:outgoing>Flow_D_PCUEL</bpmn2:outgoing>
+      <bpmn2:outgoing>Flow_D_Direct</bpmn2:outgoing>
+      <bpmn2:outgoing>Flow_D_Semnare</bpmn2:outgoing>
+    </bpmn2:exclusiveGateway>
+    <bpmn2:userTask id="Task_DAL" name="Soluționare DAL">
+      <bpmn2:documentation><![CDATA[decizieSubdirectie: INAINTE | INAPOI_DGAL]]></bpmn2:documentation>
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname"><drools:metaValue><![CDATA[Soluționare DAL]]></drools:metaValue></drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>Flow_D_DAL</bpmn2:incoming>
+      <bpmn2:outgoing>Flow_14</bpmn2:outgoing>
+      <bpmn2:ioSpecification id="Task_DAL_io">
+        <bpmn2:dataInput id="Task_DAL_TaskNameInputX" drools:dtype="Object" itemSubjectRef="_Task_DAL_TaskNameInputXItem" name="TaskName"/>
+        <bpmn2:dataInput id="Task_DAL_GroupIdInputX" drools:dtype="Object" itemSubjectRef="_Task_DAL_GroupIdInputXItem" name="GroupId"/>
+        <bpmn2:dataInput id="Task_DAL_SkippableInputX" drools:dtype="Object" itemSubjectRef="_Task_DAL_SkippableInputXItem" name="Skippable"/>
+        <bpmn2:dataOutput id="Task_DAL_decizieSubdirectieOutputX" drools:dtype="String" itemSubjectRef="_Task_DAL_decizieSubdirectieOutputXItem" name="decizieSubdirectie"/>
+        <bpmn2:inputSet id="Task_DAL_InputSet">
+          <bpmn2:dataInputRefs>Task_DAL_TaskNameInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>Task_DAL_GroupIdInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>Task_DAL_SkippableInputX</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="Task_DAL_OutputSet">
+          <bpmn2:dataOutputRefs>Task_DAL_decizieSubdirectieOutputX</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="Task_DAL_dia1">
+        <bpmn2:targetRef>Task_DAL_TaskNameInputX</bpmn2:targetRef>
+        <bpmn2:assignment id="Task_DAL_as1"><bpmn2:from xsi:type="bpmn2:tFormalExpression" id="Task_DAL_fr1"><![CDATA[DAL]]></bpmn2:from><bpmn2:to xsi:type="bpmn2:tFormalExpression" id="Task_DAL_to1"><![CDATA[Task_DAL_TaskNameInputX]]></bpmn2:to></bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="Task_DAL_dia2">
+        <bpmn2:targetRef>Task_DAL_GroupIdInputX</bpmn2:targetRef>
+        <bpmn2:assignment id="Task_DAL_as2"><bpmn2:from xsi:type="bpmn2:tFormalExpression" id="Task_DAL_fr2"><![CDATA[dal]]></bpmn2:from><bpmn2:to xsi:type="bpmn2:tFormalExpression" id="Task_DAL_to2"><![CDATA[Task_DAL_GroupIdInputX]]></bpmn2:to></bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="Task_DAL_dia3">
+        <bpmn2:targetRef>Task_DAL_SkippableInputX</bpmn2:targetRef>
+        <bpmn2:assignment id="Task_DAL_as3"><bpmn2:from xsi:type="bpmn2:tFormalExpression" id="Task_DAL_fr3"><![CDATA[false]]></bpmn2:from><bpmn2:to xsi:type="bpmn2:tFormalExpression" id="Task_DAL_to3"><![CDATA[Task_DAL_SkippableInputX]]></bpmn2:to></bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="Task_DAL_doa1">
+        <bpmn2:sourceRef>Task_DAL_decizieSubdirectieOutputX</bpmn2:sourceRef>
+        <bpmn2:targetRef>decizieSubdirectie</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+    </bpmn2:userTask>
+    <bpmn2:userTask id="Task_SRMRI" name="Soluționare SRMRI">
+      <bpmn2:documentation><![CDATA[decizieSubdirectie: INAINTE | INAPOI_DGAL]]></bpmn2:documentation>
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname"><drools:metaValue><![CDATA[Soluționare SRMRI]]></drools:metaValue></drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>Flow_D_SRMRI</bpmn2:incoming>
+      <bpmn2:outgoing>Flow_15</bpmn2:outgoing>
+      <bpmn2:ioSpecification id="Task_SRMRI_io">
+        <bpmn2:dataInput id="Task_SRMRI_TaskNameInputX" drools:dtype="Object" itemSubjectRef="_Task_SRMRI_TaskNameInputXItem" name="TaskName"/>
+        <bpmn2:dataInput id="Task_SRMRI_GroupIdInputX" drools:dtype="Object" itemSubjectRef="_Task_SRMRI_GroupIdInputXItem" name="GroupId"/>
+        <bpmn2:dataInput id="Task_SRMRI_SkippableInputX" drools:dtype="Object" itemSubjectRef="_Task_SRMRI_SkippableInputXItem" name="Skippable"/>
+        <bpmn2:dataOutput id="Task_SRMRI_decizieSubdirectieOutputX" drools:dtype="String" itemSubjectRef="_Task_SRMRI_decizieSubdirectieOutputXItem" name="decizieSubdirectie"/>
+        <bpmn2:inputSet id="Task_SRMRI_InputSet">
+          <bpmn2:dataInputRefs>Task_SRMRI_TaskNameInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>Task_SRMRI_GroupIdInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>Task_SRMRI_SkippableInputX</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="Task_SRMRI_OutputSet">
+          <bpmn2:dataOutputRefs>Task_SRMRI_decizieSubdirectieOutputX</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="Task_SRMRI_dia1">
+        <bpmn2:targetRef>Task_SRMRI_TaskNameInputX</bpmn2:targetRef>
+        <bpmn2:assignment id="Task_SRMRI_as1"><bpmn2:from xsi:type="bpmn2:tFormalExpression" id="Task_SRMRI_fr1"><![CDATA[SRMRI]]></bpmn2:from><bpmn2:to xsi:type="bpmn2:tFormalExpression" id="Task_SRMRI_to1"><![CDATA[Task_SRMRI_TaskNameInputX]]></bpmn2:to></bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="Task_SRMRI_dia2">
+        <bpmn2:targetRef>Task_SRMRI_GroupIdInputX</bpmn2:targetRef>
+        <bpmn2:assignment id="Task_SRMRI_as2"><bpmn2:from xsi:type="bpmn2:tFormalExpression" id="Task_SRMRI_fr2"><![CDATA[srmri]]></bpmn2:from><bpmn2:to xsi:type="bpmn2:tFormalExpression" id="Task_SRMRI_to2"><![CDATA[Task_SRMRI_GroupIdInputX]]></bpmn2:to></bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="Task_SRMRI_dia3">
+        <bpmn2:targetRef>Task_SRMRI_SkippableInputX</bpmn2:targetRef>
+        <bpmn2:assignment id="Task_SRMRI_as3"><bpmn2:from xsi:type="bpmn2:tFormalExpression" id="Task_SRMRI_fr3"><![CDATA[false]]></bpmn2:from><bpmn2:to xsi:type="bpmn2:tFormalExpression" id="Task_SRMRI_to3"><![CDATA[Task_SRMRI_SkippableInputX]]></bpmn2:to></bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="Task_SRMRI_doa1">
+        <bpmn2:sourceRef>Task_SRMRI_decizieSubdirectieOutputX</bpmn2:sourceRef>
+        <bpmn2:targetRef>decizieSubdirectie</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+    </bpmn2:userTask>
+    <bpmn2:userTask id="Task_PCUEL" name="Soluționare PCUEL">
+      <bpmn2:documentation><![CDATA[decizieSubdirectie: INAINTE | INAPOI_DGAL]]></bpmn2:documentation>
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname"><drools:metaValue><![CDATA[Soluționare PCUEL]]></drools:metaValue></drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>Flow_D_PCUEL</bpmn2:incoming>
+      <bpmn2:outgoing>Flow_16</bpmn2:outgoing>
+      <bpmn2:ioSpecification id="Task_PCUEL_io">
+        <bpmn2:dataInput id="Task_PCUEL_TaskNameInputX" drools:dtype="Object" itemSubjectRef="_Task_PCUEL_TaskNameInputXItem" name="TaskName"/>
+        <bpmn2:dataInput id="Task_PCUEL_GroupIdInputX" drools:dtype="Object" itemSubjectRef="_Task_PCUEL_GroupIdInputXItem" name="GroupId"/>
+        <bpmn2:dataInput id="Task_PCUEL_SkippableInputX" drools:dtype="Object" itemSubjectRef="_Task_PCUEL_SkippableInputXItem" name="Skippable"/>
+        <bpmn2:dataOutput id="Task_PCUEL_decizieSubdirectieOutputX" drools:dtype="String" itemSubjectRef="_Task_PCUEL_decizieSubdirectieOutputXItem" name="decizieSubdirectie"/>
+        <bpmn2:inputSet id="Task_PCUEL_InputSet">
+          <bpmn2:dataInputRefs>Task_PCUEL_TaskNameInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>Task_PCUEL_GroupIdInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>Task_PCUEL_SkippableInputX</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="Task_PCUEL_OutputSet">
+          <bpmn2:dataOutputRefs>Task_PCUEL_decizieSubdirectieOutputX</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="Task_PCUEL_dia1">
+        <bpmn2:targetRef>Task_PCUEL_TaskNameInputX</bpmn2:targetRef>
+        <bpmn2:assignment id="Task_PCUEL_as1"><bpmn2:from xsi:type="bpmn2:tFormalExpression" id="Task_PCUEL_fr1"><![CDATA[PCUEL]]></bpmn2:from><bpmn2:to xsi:type="bpmn2:tFormalExpression" id="Task_PCUEL_to1"><![CDATA[Task_PCUEL_TaskNameInputX]]></bpmn2:to></bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="Task_PCUEL_dia2">
+        <bpmn2:targetRef>Task_PCUEL_GroupIdInputX</bpmn2:targetRef>
+        <bpmn2:assignment id="Task_PCUEL_as2"><bpmn2:from xsi:type="bpmn2:tFormalExpression" id="Task_PCUEL_fr2"><![CDATA[pcuel]]></bpmn2:from><bpmn2:to xsi:type="bpmn2:tFormalExpression" id="Task_PCUEL_to2"><![CDATA[Task_PCUEL_GroupIdInputX]]></bpmn2:to></bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="Task_PCUEL_dia3">
+        <bpmn2:targetRef>Task_PCUEL_SkippableInputX</bpmn2:targetRef>
+        <bpmn2:assignment id="Task_PCUEL_as3"><bpmn2:from xsi:type="bpmn2:tFormalExpression" id="Task_PCUEL_fr3"><![CDATA[false]]></bpmn2:from><bpmn2:to xsi:type="bpmn2:tFormalExpression" id="Task_PCUEL_to3"><![CDATA[Task_PCUEL_SkippableInputX]]></bpmn2:to></bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="Task_PCUEL_doa1">
+        <bpmn2:sourceRef>Task_PCUEL_decizieSubdirectieOutputX</bpmn2:sourceRef>
+        <bpmn2:targetRef>decizieSubdirectie</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+    </bpmn2:userTask>
+    <bpmn2:exclusiveGateway id="Gw_DGAL_Join" name="" gatewayDirection="Converging">
+      <bpmn2:incoming>Flow_D_Direct</bpmn2:incoming>
+      <bpmn2:incoming>Flow_14</bpmn2:incoming>
+      <bpmn2:incoming>Flow_15</bpmn2:incoming>
+      <bpmn2:incoming>Flow_16</bpmn2:incoming>
+      <bpmn2:outgoing>Flow_17</bpmn2:outgoing>
+    </bpmn2:exclusiveGateway>
+    <bpmn2:exclusiveGateway id="Gw_Sub" name="Decizie subdirecție" gatewayDirection="Diverging" default="Flow_S_Inainte">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname"><drools:metaValue><![CDATA[Decizie subdirecție]]></drools:metaValue></drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>Flow_17</bpmn2:incoming>
+      <bpmn2:outgoing>Flow_S_Inainte</bpmn2:outgoing>
+      <bpmn2:outgoing>Flow_S_Inapoi</bpmn2:outgoing>
+    </bpmn2:exclusiveGateway>
+    <bpmn2:userTask id="Task_SRUE" name="Soluționare SRUE">
+      <bpmn2:documentation><![CDATA[decizieDirectie: RASPUNS | TRANSFER | OPINIE; departament: direcția țintă la TRANSFER; decizieDirectie=OPINIE: solicitant = direcția curentă, opinieDGAL/opinieSRUE/opinieSAITC/opinieSJCREP = true pentru direcțiile de la care se cere opinie]]></bpmn2:documentation>
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname"><drools:metaValue><![CDATA[Soluționare SRUE]]></drools:metaValue></drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>Flow_R_SRUE</bpmn2:incoming>
+      <bpmn2:outgoing>Flow_18</bpmn2:outgoing>
+      <bpmn2:ioSpecification id="Task_SRUE_io">
+        <bpmn2:dataInput id="Task_SRUE_TaskNameInputX" drools:dtype="Object" itemSubjectRef="_Task_SRUE_TaskNameInputXItem" name="TaskName"/>
+        <bpmn2:dataInput id="Task_SRUE_GroupIdInputX" drools:dtype="Object" itemSubjectRef="_Task_SRUE_GroupIdInputXItem" name="GroupId"/>
+        <bpmn2:dataInput id="Task_SRUE_SkippableInputX" drools:dtype="Object" itemSubjectRef="_Task_SRUE_SkippableInputXItem" name="Skippable"/>
+        <bpmn2:dataOutput id="Task_SRUE_decizieDirectieOutputX" drools:dtype="String" itemSubjectRef="_Task_SRUE_decizieDirectieOutputXItem" name="decizieDirectie"/>
+        <bpmn2:dataOutput id="Task_SRUE_departamentOutputX" drools:dtype="String" itemSubjectRef="_Task_SRUE_departamentOutputXItem" name="departament"/>
+        <bpmn2:dataOutput id="Task_SRUE_solicitantOutputX" drools:dtype="String" itemSubjectRef="_Task_SRUE_solicitantOutputXItem" name="solicitant"/>
+        <bpmn2:dataOutput id="Task_SRUE_opinieDGALOutputX" drools:dtype="Boolean" itemSubjectRef="_Task_SRUE_opinieDGALOutputXItem" name="opinieDGAL"/>
+        <bpmn2:dataOutput id="Task_SRUE_opinieSRUEOutputX" drools:dtype="Boolean" itemSubjectRef="_Task_SRUE_opinieSRUEOutputXItem" name="opinieSRUE"/>
+        <bpmn2:dataOutput id="Task_SRUE_opinieSAITCOutputX" drools:dtype="Boolean" itemSubjectRef="_Task_SRUE_opinieSAITCOutputXItem" name="opinieSAITC"/>
+        <bpmn2:dataOutput id="Task_SRUE_opinieSJCREPOutputX" drools:dtype="Boolean" itemSubjectRef="_Task_SRUE_opinieSJCREPOutputXItem" name="opinieSJCREP"/>
+        <bpmn2:inputSet id="Task_SRUE_InputSet">
+          <bpmn2:dataInputRefs>Task_SRUE_TaskNameInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>Task_SRUE_GroupIdInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>Task_SRUE_SkippableInputX</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="Task_SRUE_OutputSet">
+          <bpmn2:dataOutputRefs>Task_SRUE_decizieDirectieOutputX</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>Task_SRUE_departamentOutputX</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>Task_SRUE_solicitantOutputX</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>Task_SRUE_opinieDGALOutputX</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>Task_SRUE_opinieSRUEOutputX</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>Task_SRUE_opinieSAITCOutputX</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>Task_SRUE_opinieSJCREPOutputX</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="Task_SRUE_dia1">
+        <bpmn2:targetRef>Task_SRUE_TaskNameInputX</bpmn2:targetRef>
+        <bpmn2:assignment id="Task_SRUE_as1"><bpmn2:from xsi:type="bpmn2:tFormalExpression" id="Task_SRUE_fr1"><![CDATA[SRUE]]></bpmn2:from><bpmn2:to xsi:type="bpmn2:tFormalExpression" id="Task_SRUE_to1"><![CDATA[Task_SRUE_TaskNameInputX]]></bpmn2:to></bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="Task_SRUE_dia2">
+        <bpmn2:targetRef>Task_SRUE_GroupIdInputX</bpmn2:targetRef>
+        <bpmn2:assignment id="Task_SRUE_as2"><bpmn2:from xsi:type="bpmn2:tFormalExpression" id="Task_SRUE_fr2"><![CDATA[srue]]></bpmn2:from><bpmn2:to xsi:type="bpmn2:tFormalExpression" id="Task_SRUE_to2"><![CDATA[Task_SRUE_GroupIdInputX]]></bpmn2:to></bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="Task_SRUE_dia3">
+        <bpmn2:targetRef>Task_SRUE_SkippableInputX</bpmn2:targetRef>
+        <bpmn2:assignment id="Task_SRUE_as3"><bpmn2:from xsi:type="bpmn2:tFormalExpression" id="Task_SRUE_fr3"><![CDATA[false]]></bpmn2:from><bpmn2:to xsi:type="bpmn2:tFormalExpression" id="Task_SRUE_to3"><![CDATA[Task_SRUE_SkippableInputX]]></bpmn2:to></bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="Task_SRUE_doa1">
+        <bpmn2:sourceRef>Task_SRUE_decizieDirectieOutputX</bpmn2:sourceRef>
+        <bpmn2:targetRef>decizieDirectie</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="Task_SRUE_doa2">
+        <bpmn2:sourceRef>Task_SRUE_departamentOutputX</bpmn2:sourceRef>
+        <bpmn2:targetRef>departament</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="Task_SRUE_doa3">
+        <bpmn2:sourceRef>Task_SRUE_solicitantOutputX</bpmn2:sourceRef>
+        <bpmn2:targetRef>solicitant</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="Task_SRUE_doa4">
+        <bpmn2:sourceRef>Task_SRUE_opinieDGALOutputX</bpmn2:sourceRef>
+        <bpmn2:targetRef>opinieDGAL</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="Task_SRUE_doa5">
+        <bpmn2:sourceRef>Task_SRUE_opinieSRUEOutputX</bpmn2:sourceRef>
+        <bpmn2:targetRef>opinieSRUE</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="Task_SRUE_doa6">
+        <bpmn2:sourceRef>Task_SRUE_opinieSAITCOutputX</bpmn2:sourceRef>
+        <bpmn2:targetRef>opinieSAITC</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="Task_SRUE_doa7">
+        <bpmn2:sourceRef>Task_SRUE_opinieSJCREPOutputX</bpmn2:sourceRef>
+        <bpmn2:targetRef>opinieSJCREP</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+    </bpmn2:userTask>
+    <bpmn2:userTask id="Task_SAITC" name="Soluționare SAITC">
+      <bpmn2:documentation><![CDATA[decizieDirectie: RASPUNS | TRANSFER | OPINIE; departament: direcția țintă la TRANSFER; decizieDirectie=OPINIE: solicitant = direcția curentă, opinieDGAL/opinieSRUE/opinieSAITC/opinieSJCREP = true pentru direcțiile de la care se cere opinie]]></bpmn2:documentation>
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname"><drools:metaValue><![CDATA[Soluționare SAITC]]></drools:metaValue></drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>Flow_R_SAITC</bpmn2:incoming>
+      <bpmn2:outgoing>Flow_19</bpmn2:outgoing>
+      <bpmn2:ioSpecification id="Task_SAITC_io">
+        <bpmn2:dataInput id="Task_SAITC_TaskNameInputX" drools:dtype="Object" itemSubjectRef="_Task_SAITC_TaskNameInputXItem" name="TaskName"/>
+        <bpmn2:dataInput id="Task_SAITC_GroupIdInputX" drools:dtype="Object" itemSubjectRef="_Task_SAITC_GroupIdInputXItem" name="GroupId"/>
+        <bpmn2:dataInput id="Task_SAITC_SkippableInputX" drools:dtype="Object" itemSubjectRef="_Task_SAITC_SkippableInputXItem" name="Skippable"/>
+        <bpmn2:dataOutput id="Task_SAITC_decizieDirectieOutputX" drools:dtype="String" itemSubjectRef="_Task_SAITC_decizieDirectieOutputXItem" name="decizieDirectie"/>
+        <bpmn2:dataOutput id="Task_SAITC_departamentOutputX" drools:dtype="String" itemSubjectRef="_Task_SAITC_departamentOutputXItem" name="departament"/>
+        <bpmn2:dataOutput id="Task_SAITC_solicitantOutputX" drools:dtype="String" itemSubjectRef="_Task_SAITC_solicitantOutputXItem" name="solicitant"/>
+        <bpmn2:dataOutput id="Task_SAITC_opinieDGALOutputX" drools:dtype="Boolean" itemSubjectRef="_Task_SAITC_opinieDGALOutputXItem" name="opinieDGAL"/>
+        <bpmn2:dataOutput id="Task_SAITC_opinieSRUEOutputX" drools:dtype="Boolean" itemSubjectRef="_Task_SAITC_opinieSRUEOutputXItem" name="opinieSRUE"/>
+        <bpmn2:dataOutput id="Task_SAITC_opinieSAITCOutputX" drools:dtype="Boolean" itemSubjectRef="_Task_SAITC_opinieSAITCOutputXItem" name="opinieSAITC"/>
+        <bpmn2:dataOutput id="Task_SAITC_opinieSJCREPOutputX" drools:dtype="Boolean" itemSubjectRef="_Task_SAITC_opinieSJCREPOutputXItem" name="opinieSJCREP"/>
+        <bpmn2:inputSet id="Task_SAITC_InputSet">
+          <bpmn2:dataInputRefs>Task_SAITC_TaskNameInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>Task_SAITC_GroupIdInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>Task_SAITC_SkippableInputX</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="Task_SAITC_OutputSet">
+          <bpmn2:dataOutputRefs>Task_SAITC_decizieDirectieOutputX</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>Task_SAITC_departamentOutputX</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>Task_SAITC_solicitantOutputX</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>Task_SAITC_opinieDGALOutputX</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>Task_SAITC_opinieSRUEOutputX</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>Task_SAITC_opinieSAITCOutputX</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>Task_SAITC_opinieSJCREPOutputX</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="Task_SAITC_dia1">
+        <bpmn2:targetRef>Task_SAITC_TaskNameInputX</bpmn2:targetRef>
+        <bpmn2:assignment id="Task_SAITC_as1"><bpmn2:from xsi:type="bpmn2:tFormalExpression" id="Task_SAITC_fr1"><![CDATA[SAITC]]></bpmn2:from><bpmn2:to xsi:type="bpmn2:tFormalExpression" id="Task_SAITC_to1"><![CDATA[Task_SAITC_TaskNameInputX]]></bpmn2:to></bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="Task_SAITC_dia2">
+        <bpmn2:targetRef>Task_SAITC_GroupIdInputX</bpmn2:targetRef>
+        <bpmn2:assignment id="Task_SAITC_as2"><bpmn2:from xsi:type="bpmn2:tFormalExpression" id="Task_SAITC_fr2"><![CDATA[saitc]]></bpmn2:from><bpmn2:to xsi:type="bpmn2:tFormalExpression" id="Task_SAITC_to2"><![CDATA[Task_SAITC_GroupIdInputX]]></bpmn2:to></bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="Task_SAITC_dia3">
+        <bpmn2:targetRef>Task_SAITC_SkippableInputX</bpmn2:targetRef>
+        <bpmn2:assignment id="Task_SAITC_as3"><bpmn2:from xsi:type="bpmn2:tFormalExpression" id="Task_SAITC_fr3"><![CDATA[false]]></bpmn2:from><bpmn2:to xsi:type="bpmn2:tFormalExpression" id="Task_SAITC_to3"><![CDATA[Task_SAITC_SkippableInputX]]></bpmn2:to></bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="Task_SAITC_doa1">
+        <bpmn2:sourceRef>Task_SAITC_decizieDirectieOutputX</bpmn2:sourceRef>
+        <bpmn2:targetRef>decizieDirectie</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="Task_SAITC_doa2">
+        <bpmn2:sourceRef>Task_SAITC_departamentOutputX</bpmn2:sourceRef>
+        <bpmn2:targetRef>departament</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="Task_SAITC_doa3">
+        <bpmn2:sourceRef>Task_SAITC_solicitantOutputX</bpmn2:sourceRef>
+        <bpmn2:targetRef>solicitant</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="Task_SAITC_doa4">
+        <bpmn2:sourceRef>Task_SAITC_opinieDGALOutputX</bpmn2:sourceRef>
+        <bpmn2:targetRef>opinieDGAL</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="Task_SAITC_doa5">
+        <bpmn2:sourceRef>Task_SAITC_opinieSRUEOutputX</bpmn2:sourceRef>
+        <bpmn2:targetRef>opinieSRUE</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="Task_SAITC_doa6">
+        <bpmn2:sourceRef>Task_SAITC_opinieSAITCOutputX</bpmn2:sourceRef>
+        <bpmn2:targetRef>opinieSAITC</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="Task_SAITC_doa7">
+        <bpmn2:sourceRef>Task_SAITC_opinieSJCREPOutputX</bpmn2:sourceRef>
+        <bpmn2:targetRef>opinieSJCREP</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+    </bpmn2:userTask>
+    <bpmn2:userTask id="Task_SJCREP" name="Soluționare SJCREP">
+      <bpmn2:documentation><![CDATA[decizieDirectie: RASPUNS | TRANSFER | OPINIE; departament: direcția țintă la TRANSFER; decizieDirectie=OPINIE: solicitant = direcția curentă, opinieDGAL/opinieSRUE/opinieSAITC/opinieSJCREP = true pentru direcțiile de la care se cere opinie]]></bpmn2:documentation>
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname"><drools:metaValue><![CDATA[Soluționare SJCREP]]></drools:metaValue></drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>Flow_R_SJCREP</bpmn2:incoming>
+      <bpmn2:outgoing>Flow_20</bpmn2:outgoing>
+      <bpmn2:ioSpecification id="Task_SJCREP_io">
+        <bpmn2:dataInput id="Task_SJCREP_TaskNameInputX" drools:dtype="Object" itemSubjectRef="_Task_SJCREP_TaskNameInputXItem" name="TaskName"/>
+        <bpmn2:dataInput id="Task_SJCREP_GroupIdInputX" drools:dtype="Object" itemSubjectRef="_Task_SJCREP_GroupIdInputXItem" name="GroupId"/>
+        <bpmn2:dataInput id="Task_SJCREP_SkippableInputX" drools:dtype="Object" itemSubjectRef="_Task_SJCREP_SkippableInputXItem" name="Skippable"/>
+        <bpmn2:dataOutput id="Task_SJCREP_decizieDirectieOutputX" drools:dtype="String" itemSubjectRef="_Task_SJCREP_decizieDirectieOutputXItem" name="decizieDirectie"/>
+        <bpmn2:dataOutput id="Task_SJCREP_departamentOutputX" drools:dtype="String" itemSubjectRef="_Task_SJCREP_departamentOutputXItem" name="departament"/>
+        <bpmn2:dataOutput id="Task_SJCREP_solicitantOutputX" drools:dtype="String" itemSubjectRef="_Task_SJCREP_solicitantOutputXItem" name="solicitant"/>
+        <bpmn2:dataOutput id="Task_SJCREP_opinieDGALOutputX" drools:dtype="Boolean" itemSubjectRef="_Task_SJCREP_opinieDGALOutputXItem" name="opinieDGAL"/>
+        <bpmn2:dataOutput id="Task_SJCREP_opinieSRUEOutputX" drools:dtype="Boolean" itemSubjectRef="_Task_SJCREP_opinieSRUEOutputXItem" name="opinieSRUE"/>
+        <bpmn2:dataOutput id="Task_SJCREP_opinieSAITCOutputX" drools:dtype="Boolean" itemSubjectRef="_Task_SJCREP_opinieSAITCOutputXItem" name="opinieSAITC"/>
+        <bpmn2:dataOutput id="Task_SJCREP_opinieSJCREPOutputX" drools:dtype="Boolean" itemSubjectRef="_Task_SJCREP_opinieSJCREPOutputXItem" name="opinieSJCREP"/>
+        <bpmn2:inputSet id="Task_SJCREP_InputSet">
+          <bpmn2:dataInputRefs>Task_SJCREP_TaskNameInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>Task_SJCREP_GroupIdInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>Task_SJCREP_SkippableInputX</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="Task_SJCREP_OutputSet">
+          <bpmn2:dataOutputRefs>Task_SJCREP_decizieDirectieOutputX</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>Task_SJCREP_departamentOutputX</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>Task_SJCREP_solicitantOutputX</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>Task_SJCREP_opinieDGALOutputX</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>Task_SJCREP_opinieSRUEOutputX</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>Task_SJCREP_opinieSAITCOutputX</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>Task_SJCREP_opinieSJCREPOutputX</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="Task_SJCREP_dia1">
+        <bpmn2:targetRef>Task_SJCREP_TaskNameInputX</bpmn2:targetRef>
+        <bpmn2:assignment id="Task_SJCREP_as1"><bpmn2:from xsi:type="bpmn2:tFormalExpression" id="Task_SJCREP_fr1"><![CDATA[SJCREP]]></bpmn2:from><bpmn2:to xsi:type="bpmn2:tFormalExpression" id="Task_SJCREP_to1"><![CDATA[Task_SJCREP_TaskNameInputX]]></bpmn2:to></bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="Task_SJCREP_dia2">
+        <bpmn2:targetRef>Task_SJCREP_GroupIdInputX</bpmn2:targetRef>
+        <bpmn2:assignment id="Task_SJCREP_as2"><bpmn2:from xsi:type="bpmn2:tFormalExpression" id="Task_SJCREP_fr2"><![CDATA[sjcrep]]></bpmn2:from><bpmn2:to xsi:type="bpmn2:tFormalExpression" id="Task_SJCREP_to2"><![CDATA[Task_SJCREP_GroupIdInputX]]></bpmn2:to></bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="Task_SJCREP_dia3">
+        <bpmn2:targetRef>Task_SJCREP_SkippableInputX</bpmn2:targetRef>
+        <bpmn2:assignment id="Task_SJCREP_as3"><bpmn2:from xsi:type="bpmn2:tFormalExpression" id="Task_SJCREP_fr3"><![CDATA[false]]></bpmn2:from><bpmn2:to xsi:type="bpmn2:tFormalExpression" id="Task_SJCREP_to3"><![CDATA[Task_SJCREP_SkippableInputX]]></bpmn2:to></bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="Task_SJCREP_doa1">
+        <bpmn2:sourceRef>Task_SJCREP_decizieDirectieOutputX</bpmn2:sourceRef>
+        <bpmn2:targetRef>decizieDirectie</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="Task_SJCREP_doa2">
+        <bpmn2:sourceRef>Task_SJCREP_departamentOutputX</bpmn2:sourceRef>
+        <bpmn2:targetRef>departament</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="Task_SJCREP_doa3">
+        <bpmn2:sourceRef>Task_SJCREP_solicitantOutputX</bpmn2:sourceRef>
+        <bpmn2:targetRef>solicitant</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="Task_SJCREP_doa4">
+        <bpmn2:sourceRef>Task_SJCREP_opinieDGALOutputX</bpmn2:sourceRef>
+        <bpmn2:targetRef>opinieDGAL</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="Task_SJCREP_doa5">
+        <bpmn2:sourceRef>Task_SJCREP_opinieSRUEOutputX</bpmn2:sourceRef>
+        <bpmn2:targetRef>opinieSRUE</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="Task_SJCREP_doa6">
+        <bpmn2:sourceRef>Task_SJCREP_opinieSAITCOutputX</bpmn2:sourceRef>
+        <bpmn2:targetRef>opinieSAITC</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="Task_SJCREP_doa7">
+        <bpmn2:sourceRef>Task_SJCREP_opinieSJCREPOutputX</bpmn2:sourceRef>
+        <bpmn2:targetRef>opinieSJCREP</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+    </bpmn2:userTask>
+    <bpmn2:exclusiveGateway id="Gw_Dir_Join" name="" gatewayDirection="Converging">
+      <bpmn2:incoming>Flow_S_Inainte</bpmn2:incoming>
+      <bpmn2:incoming>Flow_18</bpmn2:incoming>
+      <bpmn2:incoming>Flow_19</bpmn2:incoming>
+      <bpmn2:incoming>Flow_20</bpmn2:incoming>
+      <bpmn2:outgoing>Flow_21</bpmn2:outgoing>
+    </bpmn2:exclusiveGateway>
+    <bpmn2:exclusiveGateway id="Gw_Dir" name="Decizie direcție" gatewayDirection="Diverging" default="Flow_Dir_Raspuns">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname"><drools:metaValue><![CDATA[Decizie direcție]]></drools:metaValue></drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>Flow_21</bpmn2:incoming>
+      <bpmn2:outgoing>Flow_Dir_Transfer</bpmn2:outgoing>
+      <bpmn2:outgoing>Flow_Dir_Raspuns</bpmn2:outgoing>
+      <bpmn2:outgoing>Flow_Dir_Opinie</bpmn2:outgoing>
+    </bpmn2:exclusiveGateway>
+    <bpmn2:inclusiveGateway id="Gw_OpS" name="Cerere opinii (OR)" gatewayDirection="Diverging" default="Flow_Op_None">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname"><drools:metaValue><![CDATA[Cerere opinii (OR)]]></drools:metaValue></drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>Flow_Dir_Opinie</bpmn2:incoming>
+      <bpmn2:outgoing>Flow_Op1</bpmn2:outgoing>
+      <bpmn2:outgoing>Flow_Op2</bpmn2:outgoing>
+      <bpmn2:outgoing>Flow_Op3</bpmn2:outgoing>
+      <bpmn2:outgoing>Flow_Op4</bpmn2:outgoing>
+      <bpmn2:outgoing>Flow_Op_None</bpmn2:outgoing>
+    </bpmn2:inclusiveGateway>
+    <bpmn2:userTask id="Op_DGAL" name="Opinie DGAL">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname"><drools:metaValue><![CDATA[Opinie DGAL]]></drools:metaValue></drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>Flow_Op1</bpmn2:incoming>
+      <bpmn2:outgoing>Flow_OpJ1</bpmn2:outgoing>
+      <bpmn2:ioSpecification id="Op_DGAL_io">
+        <bpmn2:dataInput id="Op_DGAL_TaskNameInputX" drools:dtype="Object" itemSubjectRef="_Op_DGAL_TaskNameInputXItem" name="TaskName"/>
+        <bpmn2:dataInput id="Op_DGAL_GroupIdInputX" drools:dtype="Object" itemSubjectRef="_Op_DGAL_GroupIdInputXItem" name="GroupId"/>
+        <bpmn2:dataInput id="Op_DGAL_SkippableInputX" drools:dtype="Object" itemSubjectRef="_Op_DGAL_SkippableInputXItem" name="Skippable"/>
+        <bpmn2:inputSet id="Op_DGAL_InputSet">
+          <bpmn2:dataInputRefs>Op_DGAL_TaskNameInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>Op_DGAL_GroupIdInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>Op_DGAL_SkippableInputX</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="Op_DGAL_OutputSet">
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="Op_DGAL_dia1">
+        <bpmn2:targetRef>Op_DGAL_TaskNameInputX</bpmn2:targetRef>
+        <bpmn2:assignment id="Op_DGAL_as1"><bpmn2:from xsi:type="bpmn2:tFormalExpression" id="Op_DGAL_fr1"><![CDATA[Op_DGAL]]></bpmn2:from><bpmn2:to xsi:type="bpmn2:tFormalExpression" id="Op_DGAL_to1"><![CDATA[Op_DGAL_TaskNameInputX]]></bpmn2:to></bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="Op_DGAL_dia2">
+        <bpmn2:targetRef>Op_DGAL_GroupIdInputX</bpmn2:targetRef>
+        <bpmn2:assignment id="Op_DGAL_as2"><bpmn2:from xsi:type="bpmn2:tFormalExpression" id="Op_DGAL_fr2"><![CDATA[dgal]]></bpmn2:from><bpmn2:to xsi:type="bpmn2:tFormalExpression" id="Op_DGAL_to2"><![CDATA[Op_DGAL_GroupIdInputX]]></bpmn2:to></bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="Op_DGAL_dia3">
+        <bpmn2:targetRef>Op_DGAL_SkippableInputX</bpmn2:targetRef>
+        <bpmn2:assignment id="Op_DGAL_as3"><bpmn2:from xsi:type="bpmn2:tFormalExpression" id="Op_DGAL_fr3"><![CDATA[false]]></bpmn2:from><bpmn2:to xsi:type="bpmn2:tFormalExpression" id="Op_DGAL_to3"><![CDATA[Op_DGAL_SkippableInputX]]></bpmn2:to></bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+    </bpmn2:userTask>
+    <bpmn2:userTask id="Op_SRUE" name="Opinie SRUE">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname"><drools:metaValue><![CDATA[Opinie SRUE]]></drools:metaValue></drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>Flow_Op2</bpmn2:incoming>
+      <bpmn2:outgoing>Flow_OpJ2</bpmn2:outgoing>
+      <bpmn2:ioSpecification id="Op_SRUE_io">
+        <bpmn2:dataInput id="Op_SRUE_TaskNameInputX" drools:dtype="Object" itemSubjectRef="_Op_SRUE_TaskNameInputXItem" name="TaskName"/>
+        <bpmn2:dataInput id="Op_SRUE_GroupIdInputX" drools:dtype="Object" itemSubjectRef="_Op_SRUE_GroupIdInputXItem" name="GroupId"/>
+        <bpmn2:dataInput id="Op_SRUE_SkippableInputX" drools:dtype="Object" itemSubjectRef="_Op_SRUE_SkippableInputXItem" name="Skippable"/>
+        <bpmn2:inputSet id="Op_SRUE_InputSet">
+          <bpmn2:dataInputRefs>Op_SRUE_TaskNameInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>Op_SRUE_GroupIdInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>Op_SRUE_SkippableInputX</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="Op_SRUE_OutputSet">
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="Op_SRUE_dia1">
+        <bpmn2:targetRef>Op_SRUE_TaskNameInputX</bpmn2:targetRef>
+        <bpmn2:assignment id="Op_SRUE_as1"><bpmn2:from xsi:type="bpmn2:tFormalExpression" id="Op_SRUE_fr1"><![CDATA[Op_SRUE]]></bpmn2:from><bpmn2:to xsi:type="bpmn2:tFormalExpression" id="Op_SRUE_to1"><![CDATA[Op_SRUE_TaskNameInputX]]></bpmn2:to></bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="Op_SRUE_dia2">
+        <bpmn2:targetRef>Op_SRUE_GroupIdInputX</bpmn2:targetRef>
+        <bpmn2:assignment id="Op_SRUE_as2"><bpmn2:from xsi:type="bpmn2:tFormalExpression" id="Op_SRUE_fr2"><![CDATA[srue]]></bpmn2:from><bpmn2:to xsi:type="bpmn2:tFormalExpression" id="Op_SRUE_to2"><![CDATA[Op_SRUE_GroupIdInputX]]></bpmn2:to></bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="Op_SRUE_dia3">
+        <bpmn2:targetRef>Op_SRUE_SkippableInputX</bpmn2:targetRef>
+        <bpmn2:assignment id="Op_SRUE_as3"><bpmn2:from xsi:type="bpmn2:tFormalExpression" id="Op_SRUE_fr3"><![CDATA[false]]></bpmn2:from><bpmn2:to xsi:type="bpmn2:tFormalExpression" id="Op_SRUE_to3"><![CDATA[Op_SRUE_SkippableInputX]]></bpmn2:to></bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+    </bpmn2:userTask>
+    <bpmn2:userTask id="Op_SAITC" name="Opinie SAITC">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname"><drools:metaValue><![CDATA[Opinie SAITC]]></drools:metaValue></drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>Flow_Op3</bpmn2:incoming>
+      <bpmn2:outgoing>Flow_OpJ3</bpmn2:outgoing>
+      <bpmn2:ioSpecification id="Op_SAITC_io">
+        <bpmn2:dataInput id="Op_SAITC_TaskNameInputX" drools:dtype="Object" itemSubjectRef="_Op_SAITC_TaskNameInputXItem" name="TaskName"/>
+        <bpmn2:dataInput id="Op_SAITC_GroupIdInputX" drools:dtype="Object" itemSubjectRef="_Op_SAITC_GroupIdInputXItem" name="GroupId"/>
+        <bpmn2:dataInput id="Op_SAITC_SkippableInputX" drools:dtype="Object" itemSubjectRef="_Op_SAITC_SkippableInputXItem" name="Skippable"/>
+        <bpmn2:inputSet id="Op_SAITC_InputSet">
+          <bpmn2:dataInputRefs>Op_SAITC_TaskNameInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>Op_SAITC_GroupIdInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>Op_SAITC_SkippableInputX</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="Op_SAITC_OutputSet">
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="Op_SAITC_dia1">
+        <bpmn2:targetRef>Op_SAITC_TaskNameInputX</bpmn2:targetRef>
+        <bpmn2:assignment id="Op_SAITC_as1"><bpmn2:from xsi:type="bpmn2:tFormalExpression" id="Op_SAITC_fr1"><![CDATA[Op_SAITC]]></bpmn2:from><bpmn2:to xsi:type="bpmn2:tFormalExpression" id="Op_SAITC_to1"><![CDATA[Op_SAITC_TaskNameInputX]]></bpmn2:to></bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="Op_SAITC_dia2">
+        <bpmn2:targetRef>Op_SAITC_GroupIdInputX</bpmn2:targetRef>
+        <bpmn2:assignment id="Op_SAITC_as2"><bpmn2:from xsi:type="bpmn2:tFormalExpression" id="Op_SAITC_fr2"><![CDATA[saitc]]></bpmn2:from><bpmn2:to xsi:type="bpmn2:tFormalExpression" id="Op_SAITC_to2"><![CDATA[Op_SAITC_GroupIdInputX]]></bpmn2:to></bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="Op_SAITC_dia3">
+        <bpmn2:targetRef>Op_SAITC_SkippableInputX</bpmn2:targetRef>
+        <bpmn2:assignment id="Op_SAITC_as3"><bpmn2:from xsi:type="bpmn2:tFormalExpression" id="Op_SAITC_fr3"><![CDATA[false]]></bpmn2:from><bpmn2:to xsi:type="bpmn2:tFormalExpression" id="Op_SAITC_to3"><![CDATA[Op_SAITC_SkippableInputX]]></bpmn2:to></bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+    </bpmn2:userTask>
+    <bpmn2:userTask id="Op_SJCREP" name="Opinie SJCREP">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname"><drools:metaValue><![CDATA[Opinie SJCREP]]></drools:metaValue></drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>Flow_Op4</bpmn2:incoming>
+      <bpmn2:outgoing>Flow_OpJ4</bpmn2:outgoing>
+      <bpmn2:ioSpecification id="Op_SJCREP_io">
+        <bpmn2:dataInput id="Op_SJCREP_TaskNameInputX" drools:dtype="Object" itemSubjectRef="_Op_SJCREP_TaskNameInputXItem" name="TaskName"/>
+        <bpmn2:dataInput id="Op_SJCREP_GroupIdInputX" drools:dtype="Object" itemSubjectRef="_Op_SJCREP_GroupIdInputXItem" name="GroupId"/>
+        <bpmn2:dataInput id="Op_SJCREP_SkippableInputX" drools:dtype="Object" itemSubjectRef="_Op_SJCREP_SkippableInputXItem" name="Skippable"/>
+        <bpmn2:inputSet id="Op_SJCREP_InputSet">
+          <bpmn2:dataInputRefs>Op_SJCREP_TaskNameInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>Op_SJCREP_GroupIdInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>Op_SJCREP_SkippableInputX</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="Op_SJCREP_OutputSet">
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="Op_SJCREP_dia1">
+        <bpmn2:targetRef>Op_SJCREP_TaskNameInputX</bpmn2:targetRef>
+        <bpmn2:assignment id="Op_SJCREP_as1"><bpmn2:from xsi:type="bpmn2:tFormalExpression" id="Op_SJCREP_fr1"><![CDATA[Op_SJCREP]]></bpmn2:from><bpmn2:to xsi:type="bpmn2:tFormalExpression" id="Op_SJCREP_to1"><![CDATA[Op_SJCREP_TaskNameInputX]]></bpmn2:to></bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="Op_SJCREP_dia2">
+        <bpmn2:targetRef>Op_SJCREP_GroupIdInputX</bpmn2:targetRef>
+        <bpmn2:assignment id="Op_SJCREP_as2"><bpmn2:from xsi:type="bpmn2:tFormalExpression" id="Op_SJCREP_fr2"><![CDATA[sjcrep]]></bpmn2:from><bpmn2:to xsi:type="bpmn2:tFormalExpression" id="Op_SJCREP_to2"><![CDATA[Op_SJCREP_GroupIdInputX]]></bpmn2:to></bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="Op_SJCREP_dia3">
+        <bpmn2:targetRef>Op_SJCREP_SkippableInputX</bpmn2:targetRef>
+        <bpmn2:assignment id="Op_SJCREP_as3"><bpmn2:from xsi:type="bpmn2:tFormalExpression" id="Op_SJCREP_fr3"><![CDATA[false]]></bpmn2:from><bpmn2:to xsi:type="bpmn2:tFormalExpression" id="Op_SJCREP_to3"><![CDATA[Op_SJCREP_SkippableInputX]]></bpmn2:to></bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+    </bpmn2:userTask>
+    <bpmn2:inclusiveGateway id="Gw_OpJ" name="Opinii primite (OR)" gatewayDirection="Converging">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname"><drools:metaValue><![CDATA[Opinii primite (OR)]]></drools:metaValue></drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>Flow_OpJ1</bpmn2:incoming>
+      <bpmn2:incoming>Flow_OpJ2</bpmn2:incoming>
+      <bpmn2:incoming>Flow_OpJ3</bpmn2:incoming>
+      <bpmn2:incoming>Flow_OpJ4</bpmn2:incoming>
+      <bpmn2:outgoing>Flow_OpB1</bpmn2:outgoing>
+    </bpmn2:inclusiveGateway>
+    <bpmn2:exclusiveGateway id="Gw_Back_In" name="" gatewayDirection="Converging">
+      <bpmn2:incoming>Flow_OpB1</bpmn2:incoming>
+      <bpmn2:incoming>Flow_Op_None</bpmn2:incoming>
+      <bpmn2:outgoing>Flow_Back_In</bpmn2:outgoing>
+    </bpmn2:exclusiveGateway>
+    <bpmn2:scriptTask id="Script_Back" name="Revenire la solicitant" scriptFormat="http://www.java.com/java">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname"><drools:metaValue><![CDATA[Revenire la solicitant]]></drools:metaValue></drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>Flow_Back_In</bpmn2:incoming>
+      <bpmn2:outgoing>Flow_OpB2</bpmn2:outgoing>
+      <bpmn2:script><![CDATA[kcontext.setVariable("departament", kcontext.getVariable("solicitant"));
+kcontext.setVariable("solicitant", null);
+kcontext.setVariable("opinieDGAL", Boolean.FALSE);
+kcontext.setVariable("opinieSRUE", Boolean.FALSE);
+kcontext.setVariable("opinieSAITC", Boolean.FALSE);
+kcontext.setVariable("opinieSJCREP", Boolean.FALSE);
+kcontext.setVariable("decizieDirectie", null);]]></bpmn2:script>
+    </bpmn2:scriptTask>
+    <bpmn2:userTask id="Task_Alte" name="Alte probleme – analiză">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname"><drools:metaValue><![CDATA[Alte probleme – analiză]]></drools:metaValue></drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>Flow_R_Alte</bpmn2:incoming>
+      <bpmn2:outgoing>Flow_30</bpmn2:outgoing>
+      <bpmn2:ioSpecification id="Task_Alte_io">
+        <bpmn2:dataInput id="Task_Alte_TaskNameInputX" drools:dtype="Object" itemSubjectRef="_Task_Alte_TaskNameInputXItem" name="TaskName"/>
+        <bpmn2:dataInput id="Task_Alte_GroupIdInputX" drools:dtype="Object" itemSubjectRef="_Task_Alte_GroupIdInputXItem" name="GroupId"/>
+        <bpmn2:dataInput id="Task_Alte_SkippableInputX" drools:dtype="Object" itemSubjectRef="_Task_Alte_SkippableInputXItem" name="Skippable"/>
+        <bpmn2:inputSet id="Task_Alte_InputSet">
+          <bpmn2:dataInputRefs>Task_Alte_TaskNameInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>Task_Alte_GroupIdInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>Task_Alte_SkippableInputX</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="Task_Alte_OutputSet">
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="Task_Alte_dia1">
+        <bpmn2:targetRef>Task_Alte_TaskNameInputX</bpmn2:targetRef>
+        <bpmn2:assignment id="Task_Alte_as1"><bpmn2:from xsi:type="bpmn2:tFormalExpression" id="Task_Alte_fr1"><![CDATA[Alte]]></bpmn2:from><bpmn2:to xsi:type="bpmn2:tFormalExpression" id="Task_Alte_to1"><![CDATA[Task_Alte_TaskNameInputX]]></bpmn2:to></bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="Task_Alte_dia2">
+        <bpmn2:targetRef>Task_Alte_GroupIdInputX</bpmn2:targetRef>
+        <bpmn2:assignment id="Task_Alte_as2"><bpmn2:from xsi:type="bpmn2:tFormalExpression" id="Task_Alte_fr2"><![CDATA[secretariat]]></bpmn2:from><bpmn2:to xsi:type="bpmn2:tFormalExpression" id="Task_Alte_to2"><![CDATA[Task_Alte_GroupIdInputX]]></bpmn2:to></bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="Task_Alte_dia3">
+        <bpmn2:targetRef>Task_Alte_SkippableInputX</bpmn2:targetRef>
+        <bpmn2:assignment id="Task_Alte_as3"><bpmn2:from xsi:type="bpmn2:tFormalExpression" id="Task_Alte_fr3"><![CDATA[false]]></bpmn2:from><bpmn2:to xsi:type="bpmn2:tFormalExpression" id="Task_Alte_to3"><![CDATA[Task_Alte_SkippableInputX]]></bpmn2:to></bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+    </bpmn2:userTask>
+    <bpmn2:exclusiveGateway id="Gw_Cab_In" name="" gatewayDirection="Converging">
+      <bpmn2:incoming>Flow_30</bpmn2:incoming>
+      <bpmn2:incoming>Flow_34</bpmn2:incoming>
+      <bpmn2:outgoing>Flow_Cab_In</bpmn2:outgoing>
+    </bpmn2:exclusiveGateway>
+    <bpmn2:userTask id="Task_Cabinet" name="Cabinet / Secretariat – analiză">
+      <bpmn2:documentation><![CDATA[decizieCabinet: CONDUCERE | REDISTRIBUIRE; departament: direcția țintă la REDISTRIBUIRE]]></bpmn2:documentation>
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname"><drools:metaValue><![CDATA[Cabinet / Secretariat – analiză]]></drools:metaValue></drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>Flow_Cab_In</bpmn2:incoming>
+      <bpmn2:outgoing>Flow_31</bpmn2:outgoing>
+      <bpmn2:ioSpecification id="Task_Cabinet_io">
+        <bpmn2:dataInput id="Task_Cabinet_TaskNameInputX" drools:dtype="Object" itemSubjectRef="_Task_Cabinet_TaskNameInputXItem" name="TaskName"/>
+        <bpmn2:dataInput id="Task_Cabinet_GroupIdInputX" drools:dtype="Object" itemSubjectRef="_Task_Cabinet_GroupIdInputXItem" name="GroupId"/>
+        <bpmn2:dataInput id="Task_Cabinet_SkippableInputX" drools:dtype="Object" itemSubjectRef="_Task_Cabinet_SkippableInputXItem" name="Skippable"/>
+        <bpmn2:dataOutput id="Task_Cabinet_decizieCabinetOutputX" drools:dtype="String" itemSubjectRef="_Task_Cabinet_decizieCabinetOutputXItem" name="decizieCabinet"/>
+        <bpmn2:dataOutput id="Task_Cabinet_departamentOutputX" drools:dtype="String" itemSubjectRef="_Task_Cabinet_departamentOutputXItem" name="departament"/>
+        <bpmn2:inputSet id="Task_Cabinet_InputSet">
+          <bpmn2:dataInputRefs>Task_Cabinet_TaskNameInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>Task_Cabinet_GroupIdInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>Task_Cabinet_SkippableInputX</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="Task_Cabinet_OutputSet">
+          <bpmn2:dataOutputRefs>Task_Cabinet_decizieCabinetOutputX</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>Task_Cabinet_departamentOutputX</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="Task_Cabinet_dia1">
+        <bpmn2:targetRef>Task_Cabinet_TaskNameInputX</bpmn2:targetRef>
+        <bpmn2:assignment id="Task_Cabinet_as1"><bpmn2:from xsi:type="bpmn2:tFormalExpression" id="Task_Cabinet_fr1"><![CDATA[Cabinet]]></bpmn2:from><bpmn2:to xsi:type="bpmn2:tFormalExpression" id="Task_Cabinet_to1"><![CDATA[Task_Cabinet_TaskNameInputX]]></bpmn2:to></bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="Task_Cabinet_dia2">
+        <bpmn2:targetRef>Task_Cabinet_GroupIdInputX</bpmn2:targetRef>
+        <bpmn2:assignment id="Task_Cabinet_as2"><bpmn2:from xsi:type="bpmn2:tFormalExpression" id="Task_Cabinet_fr2"><![CDATA[secretariat]]></bpmn2:from><bpmn2:to xsi:type="bpmn2:tFormalExpression" id="Task_Cabinet_to2"><![CDATA[Task_Cabinet_GroupIdInputX]]></bpmn2:to></bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="Task_Cabinet_dia3">
+        <bpmn2:targetRef>Task_Cabinet_SkippableInputX</bpmn2:targetRef>
+        <bpmn2:assignment id="Task_Cabinet_as3"><bpmn2:from xsi:type="bpmn2:tFormalExpression" id="Task_Cabinet_fr3"><![CDATA[false]]></bpmn2:from><bpmn2:to xsi:type="bpmn2:tFormalExpression" id="Task_Cabinet_to3"><![CDATA[Task_Cabinet_SkippableInputX]]></bpmn2:to></bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="Task_Cabinet_doa1">
+        <bpmn2:sourceRef>Task_Cabinet_decizieCabinetOutputX</bpmn2:sourceRef>
+        <bpmn2:targetRef>decizieCabinet</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="Task_Cabinet_doa2">
+        <bpmn2:sourceRef>Task_Cabinet_departamentOutputX</bpmn2:sourceRef>
+        <bpmn2:targetRef>departament</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+    </bpmn2:userTask>
+    <bpmn2:exclusiveGateway id="Gw_Cabinet" name="Decizie Cabinet" gatewayDirection="Diverging" default="Flow_C_Cond">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname"><drools:metaValue><![CDATA[Decizie Cabinet]]></drools:metaValue></drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>Flow_31</bpmn2:incoming>
+      <bpmn2:outgoing>Flow_C_Redist</bpmn2:outgoing>
+      <bpmn2:outgoing>Flow_C_Cond</bpmn2:outgoing>
+    </bpmn2:exclusiveGateway>
+    <bpmn2:userTask id="Task_Conducere" name="Analiză Președinte / SG / Vicepreședinte">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname"><drools:metaValue><![CDATA[Analiză Președinte / SG / Vicepreședinte]]></drools:metaValue></drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>Flow_C_Cond</bpmn2:incoming>
+      <bpmn2:outgoing>Flow_34</bpmn2:outgoing>
+      <bpmn2:ioSpecification id="Task_Conducere_io">
+        <bpmn2:dataInput id="Task_Conducere_TaskNameInputX" drools:dtype="Object" itemSubjectRef="_Task_Conducere_TaskNameInputXItem" name="TaskName"/>
+        <bpmn2:dataInput id="Task_Conducere_GroupIdInputX" drools:dtype="Object" itemSubjectRef="_Task_Conducere_GroupIdInputXItem" name="GroupId"/>
+        <bpmn2:dataInput id="Task_Conducere_SkippableInputX" drools:dtype="Object" itemSubjectRef="_Task_Conducere_SkippableInputXItem" name="Skippable"/>
+        <bpmn2:inputSet id="Task_Conducere_InputSet">
+          <bpmn2:dataInputRefs>Task_Conducere_TaskNameInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>Task_Conducere_GroupIdInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>Task_Conducere_SkippableInputX</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="Task_Conducere_OutputSet">
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="Task_Conducere_dia1">
+        <bpmn2:targetRef>Task_Conducere_TaskNameInputX</bpmn2:targetRef>
+        <bpmn2:assignment id="Task_Conducere_as1"><bpmn2:from xsi:type="bpmn2:tFormalExpression" id="Task_Conducere_fr1"><![CDATA[Conducere]]></bpmn2:from><bpmn2:to xsi:type="bpmn2:tFormalExpression" id="Task_Conducere_to1"><![CDATA[Task_Conducere_TaskNameInputX]]></bpmn2:to></bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="Task_Conducere_dia2">
+        <bpmn2:targetRef>Task_Conducere_GroupIdInputX</bpmn2:targetRef>
+        <bpmn2:assignment id="Task_Conducere_as2"><bpmn2:from xsi:type="bpmn2:tFormalExpression" id="Task_Conducere_fr2"><![CDATA[conducere]]></bpmn2:from><bpmn2:to xsi:type="bpmn2:tFormalExpression" id="Task_Conducere_to2"><![CDATA[Task_Conducere_GroupIdInputX]]></bpmn2:to></bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="Task_Conducere_dia3">
+        <bpmn2:targetRef>Task_Conducere_SkippableInputX</bpmn2:targetRef>
+        <bpmn2:assignment id="Task_Conducere_as3"><bpmn2:from xsi:type="bpmn2:tFormalExpression" id="Task_Conducere_fr3"><![CDATA[false]]></bpmn2:from><bpmn2:to xsi:type="bpmn2:tFormalExpression" id="Task_Conducere_to3"><![CDATA[Task_Conducere_SkippableInputX]]></bpmn2:to></bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+    </bpmn2:userTask>
+    <bpmn2:exclusiveGateway id="Gw_Semnare_Join" name="" gatewayDirection="Converging">
+      <bpmn2:incoming>Flow_D_Semnare</bpmn2:incoming>
+      <bpmn2:incoming>Flow_Dir_Raspuns</bpmn2:incoming>
+      <bpmn2:outgoing>Flow_40</bpmn2:outgoing>
+    </bpmn2:exclusiveGateway>
+    <bpmn2:userTask id="Task_Semnare" name="Semnare răspuns (Președinte / persoană desemnată)">
+      <bpmn2:documentation><![CDATA[decizieSemnare: SEMNAT | RETURNAT; departament: direcția la care se returnează (DGAL | SRUE | SAITC | SJCREP)]]></bpmn2:documentation>
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname"><drools:metaValue><![CDATA[Semnare răspuns (Președinte / persoană desemnată)]]></drools:metaValue></drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>Flow_40</bpmn2:incoming>
+      <bpmn2:outgoing>Flow_41</bpmn2:outgoing>
+      <bpmn2:ioSpecification id="Task_Semnare_io">
+        <bpmn2:dataInput id="Task_Semnare_TaskNameInputX" drools:dtype="Object" itemSubjectRef="_Task_Semnare_TaskNameInputXItem" name="TaskName"/>
+        <bpmn2:dataInput id="Task_Semnare_GroupIdInputX" drools:dtype="Object" itemSubjectRef="_Task_Semnare_GroupIdInputXItem" name="GroupId"/>
+        <bpmn2:dataInput id="Task_Semnare_SkippableInputX" drools:dtype="Object" itemSubjectRef="_Task_Semnare_SkippableInputXItem" name="Skippable"/>
+        <bpmn2:dataOutput id="Task_Semnare_decizieSemnareOutputX" drools:dtype="String" itemSubjectRef="_Task_Semnare_decizieSemnareOutputXItem" name="decizieSemnare"/>
+        <bpmn2:dataOutput id="Task_Semnare_departamentOutputX" drools:dtype="String" itemSubjectRef="_Task_Semnare_departamentOutputXItem" name="departament"/>
+        <bpmn2:inputSet id="Task_Semnare_InputSet">
+          <bpmn2:dataInputRefs>Task_Semnare_TaskNameInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>Task_Semnare_GroupIdInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>Task_Semnare_SkippableInputX</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="Task_Semnare_OutputSet">
+          <bpmn2:dataOutputRefs>Task_Semnare_decizieSemnareOutputX</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>Task_Semnare_departamentOutputX</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="Task_Semnare_dia1">
+        <bpmn2:targetRef>Task_Semnare_TaskNameInputX</bpmn2:targetRef>
+        <bpmn2:assignment id="Task_Semnare_as1"><bpmn2:from xsi:type="bpmn2:tFormalExpression" id="Task_Semnare_fr1"><![CDATA[Semnare]]></bpmn2:from><bpmn2:to xsi:type="bpmn2:tFormalExpression" id="Task_Semnare_to1"><![CDATA[Task_Semnare_TaskNameInputX]]></bpmn2:to></bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="Task_Semnare_dia2">
+        <bpmn2:targetRef>Task_Semnare_GroupIdInputX</bpmn2:targetRef>
+        <bpmn2:assignment id="Task_Semnare_as2"><bpmn2:from xsi:type="bpmn2:tFormalExpression" id="Task_Semnare_fr2"><![CDATA[conducere]]></bpmn2:from><bpmn2:to xsi:type="bpmn2:tFormalExpression" id="Task_Semnare_to2"><![CDATA[Task_Semnare_GroupIdInputX]]></bpmn2:to></bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="Task_Semnare_dia3">
+        <bpmn2:targetRef>Task_Semnare_SkippableInputX</bpmn2:targetRef>
+        <bpmn2:assignment id="Task_Semnare_as3"><bpmn2:from xsi:type="bpmn2:tFormalExpression" id="Task_Semnare_fr3"><![CDATA[false]]></bpmn2:from><bpmn2:to xsi:type="bpmn2:tFormalExpression" id="Task_Semnare_to3"><![CDATA[Task_Semnare_SkippableInputX]]></bpmn2:to></bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="Task_Semnare_doa1">
+        <bpmn2:sourceRef>Task_Semnare_decizieSemnareOutputX</bpmn2:sourceRef>
+        <bpmn2:targetRef>decizieSemnare</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="Task_Semnare_doa2">
+        <bpmn2:sourceRef>Task_Semnare_departamentOutputX</bpmn2:sourceRef>
+        <bpmn2:targetRef>departament</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+    </bpmn2:userTask>
+    <bpmn2:exclusiveGateway id="Gw_Semnare" name="Decizie semnare" gatewayDirection="Diverging" default="Flow_Sem_Ok">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname"><drools:metaValue><![CDATA[Decizie semnare]]></drools:metaValue></drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>Flow_41</bpmn2:incoming>
+      <bpmn2:outgoing>Flow_Sem_Ok</bpmn2:outgoing>
+      <bpmn2:outgoing>Flow_Sem_Ret</bpmn2:outgoing>
+    </bpmn2:exclusiveGateway>
+    <bpmn2:userTask id="Task_Expediere" name="Expediere răspuns (plecare document)">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname"><drools:metaValue><![CDATA[Expediere răspuns (plecare document)]]></drools:metaValue></drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>Flow_Sem_Ok</bpmn2:incoming>
+      <bpmn2:outgoing>Flow_42</bpmn2:outgoing>
+      <bpmn2:ioSpecification id="Task_Expediere_io">
+        <bpmn2:dataInput id="Task_Expediere_TaskNameInputX" drools:dtype="Object" itemSubjectRef="_Task_Expediere_TaskNameInputXItem" name="TaskName"/>
+        <bpmn2:dataInput id="Task_Expediere_GroupIdInputX" drools:dtype="Object" itemSubjectRef="_Task_Expediere_GroupIdInputXItem" name="GroupId"/>
+        <bpmn2:dataInput id="Task_Expediere_SkippableInputX" drools:dtype="Object" itemSubjectRef="_Task_Expediere_SkippableInputXItem" name="Skippable"/>
+        <bpmn2:inputSet id="Task_Expediere_InputSet">
+          <bpmn2:dataInputRefs>Task_Expediere_TaskNameInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>Task_Expediere_GroupIdInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>Task_Expediere_SkippableInputX</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="Task_Expediere_OutputSet">
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="Task_Expediere_dia1">
+        <bpmn2:targetRef>Task_Expediere_TaskNameInputX</bpmn2:targetRef>
+        <bpmn2:assignment id="Task_Expediere_as1"><bpmn2:from xsi:type="bpmn2:tFormalExpression" id="Task_Expediere_fr1"><![CDATA[Expediere]]></bpmn2:from><bpmn2:to xsi:type="bpmn2:tFormalExpression" id="Task_Expediere_to1"><![CDATA[Task_Expediere_TaskNameInputX]]></bpmn2:to></bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="Task_Expediere_dia2">
+        <bpmn2:targetRef>Task_Expediere_GroupIdInputX</bpmn2:targetRef>
+        <bpmn2:assignment id="Task_Expediere_as2"><bpmn2:from xsi:type="bpmn2:tFormalExpression" id="Task_Expediere_fr2"><![CDATA[registratura]]></bpmn2:from><bpmn2:to xsi:type="bpmn2:tFormalExpression" id="Task_Expediere_to2"><![CDATA[Task_Expediere_GroupIdInputX]]></bpmn2:to></bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="Task_Expediere_dia3">
+        <bpmn2:targetRef>Task_Expediere_SkippableInputX</bpmn2:targetRef>
+        <bpmn2:assignment id="Task_Expediere_as3"><bpmn2:from xsi:type="bpmn2:tFormalExpression" id="Task_Expediere_fr3"><![CDATA[false]]></bpmn2:from><bpmn2:to xsi:type="bpmn2:tFormalExpression" id="Task_Expediere_to3"><![CDATA[Task_Expediere_SkippableInputX]]></bpmn2:to></bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+    </bpmn2:userTask>
+    <bpmn2:endEvent id="EndEvent_1" name="Răspuns expediat">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname"><drools:metaValue><![CDATA[Răspuns expediat]]></drools:metaValue></drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>Flow_42</bpmn2:incoming>
+    </bpmn2:endEvent>
+    <bpmn2:sequenceFlow id="Flow_01" sourceRef="StartEvent_1" targetRef="Task_Inregistrare"/>
+    <bpmn2:sequenceFlow id="Flow_02" sourceRef="Task_Inregistrare" targetRef="Gw_Repart_Join"/>
+    <bpmn2:sequenceFlow id="Flow_03" sourceRef="Gw_Repart_Join" targetRef="Gw_Repart"/>
+    <bpmn2:sequenceFlow id="Flow_R_DGAL" sourceRef="Gw_Repart" targetRef="Gw_DGAL_In">
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="Flow_R_DGAL_cond" language="http://www.java.com/java"><![CDATA[return "DGAL".equals(departament);]]></bpmn2:conditionExpression>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="Flow_R_SRUE" sourceRef="Gw_Repart" targetRef="Task_SRUE">
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="Flow_R_SRUE_cond" language="http://www.java.com/java"><![CDATA[return "SRUE".equals(departament);]]></bpmn2:conditionExpression>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="Flow_R_SAITC" sourceRef="Gw_Repart" targetRef="Task_SAITC">
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="Flow_R_SAITC_cond" language="http://www.java.com/java"><![CDATA[return "SAITC".equals(departament);]]></bpmn2:conditionExpression>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="Flow_R_SJCREP" sourceRef="Gw_Repart" targetRef="Task_SJCREP">
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="Flow_R_SJCREP_cond" language="http://www.java.com/java"><![CDATA[return "SJCREP".equals(departament);]]></bpmn2:conditionExpression>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="Flow_R_Alte" sourceRef="Gw_Repart" targetRef="Task_Alte">
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="Flow_R_Alte_cond" language="http://www.java.com/java"><![CDATA[return !(("DGAL".equals(departament)) || ("SRUE".equals(departament)) || ("SAITC".equals(departament)) || ("SJCREP".equals(departament)));]]></bpmn2:conditionExpression>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="Flow_10" sourceRef="Task_DGAL" targetRef="Gw_DGAL"/>
+    <bpmn2:sequenceFlow id="Flow_D_DAL" sourceRef="Gw_DGAL" targetRef="Task_DAL">
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="Flow_D_DAL_cond" language="http://www.java.com/java"><![CDATA[return "DAL".equals(decizieDGAL);]]></bpmn2:conditionExpression>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="Flow_D_SRMRI" sourceRef="Gw_DGAL" targetRef="Task_SRMRI">
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="Flow_D_SRMRI_cond" language="http://www.java.com/java"><![CDATA[return "SRMRI".equals(decizieDGAL);]]></bpmn2:conditionExpression>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="Flow_D_PCUEL" sourceRef="Gw_DGAL" targetRef="Task_PCUEL">
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="Flow_D_PCUEL_cond" language="http://www.java.com/java"><![CDATA[return "PCUEL".equals(decizieDGAL);]]></bpmn2:conditionExpression>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="Flow_D_Direct" sourceRef="Gw_DGAL" targetRef="Gw_DGAL_Join">
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="Flow_D_Direct_cond" language="http://www.java.com/java"><![CDATA[return !(("DAL".equals(decizieDGAL)) || ("SRMRI".equals(decizieDGAL)) || ("PCUEL".equals(decizieDGAL)) || ("SEMNARE".equals(decizieDGAL)));]]></bpmn2:conditionExpression>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="Flow_D_Semnare" sourceRef="Gw_DGAL" targetRef="Gw_Semnare_Join">
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="Flow_D_Semnare_cond" language="http://www.java.com/java"><![CDATA[return "SEMNARE".equals(decizieDGAL);]]></bpmn2:conditionExpression>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="Flow_14" sourceRef="Task_DAL" targetRef="Gw_DGAL_Join"/>
+    <bpmn2:sequenceFlow id="Flow_15" sourceRef="Task_SRMRI" targetRef="Gw_DGAL_Join"/>
+    <bpmn2:sequenceFlow id="Flow_16" sourceRef="Task_PCUEL" targetRef="Gw_DGAL_Join"/>
+    <bpmn2:sequenceFlow id="Flow_17" sourceRef="Gw_DGAL_Join" targetRef="Gw_Sub"/>
+    <bpmn2:sequenceFlow id="Flow_S_Inainte" sourceRef="Gw_Sub" targetRef="Gw_Dir_Join">
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="Flow_S_Inainte_cond" language="http://www.java.com/java"><![CDATA[return !(("INAPOI_DGAL".equals(decizieSubdirectie)));]]></bpmn2:conditionExpression>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="Flow_DGAL_In" sourceRef="Gw_DGAL_In" targetRef="Task_DGAL"/>
+    <bpmn2:sequenceFlow id="Flow_S_Inapoi" sourceRef="Gw_Sub" targetRef="Gw_DGAL_In">
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="Flow_S_Inapoi_cond" language="http://www.java.com/java"><![CDATA[return "INAPOI_DGAL".equals(decizieSubdirectie);]]></bpmn2:conditionExpression>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="Flow_18" sourceRef="Task_SRUE" targetRef="Gw_Dir_Join"/>
+    <bpmn2:sequenceFlow id="Flow_19" sourceRef="Task_SAITC" targetRef="Gw_Dir_Join"/>
+    <bpmn2:sequenceFlow id="Flow_20" sourceRef="Task_SJCREP" targetRef="Gw_Dir_Join"/>
+    <bpmn2:sequenceFlow id="Flow_21" sourceRef="Gw_Dir_Join" targetRef="Gw_Dir"/>
+    <bpmn2:sequenceFlow id="Flow_Dir_Transfer" sourceRef="Gw_Dir" targetRef="Gw_Repart_Join">
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="Flow_Dir_Transfer_cond" language="http://www.java.com/java"><![CDATA[return "TRANSFER".equals(decizieDirectie);]]></bpmn2:conditionExpression>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="Flow_Dir_Raspuns" sourceRef="Gw_Dir" targetRef="Gw_Semnare_Join">
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="Flow_Dir_Raspuns_cond" language="http://www.java.com/java"><![CDATA[return !(("TRANSFER".equals(decizieDirectie)) || ("OPINIE".equals(decizieDirectie)));]]></bpmn2:conditionExpression>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="Flow_Dir_Opinie" sourceRef="Gw_Dir" targetRef="Gw_OpS">
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="Flow_Dir_Opinie_cond" language="http://www.java.com/java"><![CDATA[return "OPINIE".equals(decizieDirectie);]]></bpmn2:conditionExpression>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="Flow_Op1" sourceRef="Gw_OpS" targetRef="Op_DGAL">
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="Flow_Op1_cond" language="http://www.java.com/java"><![CDATA[return Boolean.TRUE.equals(opinieDGAL);]]></bpmn2:conditionExpression>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="Flow_Op2" sourceRef="Gw_OpS" targetRef="Op_SRUE">
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="Flow_Op2_cond" language="http://www.java.com/java"><![CDATA[return Boolean.TRUE.equals(opinieSRUE);]]></bpmn2:conditionExpression>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="Flow_Op3" sourceRef="Gw_OpS" targetRef="Op_SAITC">
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="Flow_Op3_cond" language="http://www.java.com/java"><![CDATA[return Boolean.TRUE.equals(opinieSAITC);]]></bpmn2:conditionExpression>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="Flow_Op4" sourceRef="Gw_OpS" targetRef="Op_SJCREP">
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="Flow_Op4_cond" language="http://www.java.com/java"><![CDATA[return Boolean.TRUE.equals(opinieSJCREP);]]></bpmn2:conditionExpression>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="Flow_OpJ1" sourceRef="Op_DGAL" targetRef="Gw_OpJ"/>
+    <bpmn2:sequenceFlow id="Flow_OpJ2" sourceRef="Op_SRUE" targetRef="Gw_OpJ"/>
+    <bpmn2:sequenceFlow id="Flow_OpJ3" sourceRef="Op_SAITC" targetRef="Gw_OpJ"/>
+    <bpmn2:sequenceFlow id="Flow_OpJ4" sourceRef="Op_SJCREP" targetRef="Gw_OpJ"/>
+    <bpmn2:sequenceFlow id="Flow_OpB1" sourceRef="Gw_OpJ" targetRef="Gw_Back_In"/>
+    <bpmn2:sequenceFlow id="Flow_Back_In" sourceRef="Gw_Back_In" targetRef="Script_Back"/>
+    <bpmn2:sequenceFlow id="Flow_Op_None" sourceRef="Gw_OpS" targetRef="Gw_Back_In">
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="Flow_Op_None_cond" language="http://www.java.com/java"><![CDATA[return !((Boolean.TRUE.equals(opinieDGAL)) || (Boolean.TRUE.equals(opinieSRUE)) || (Boolean.TRUE.equals(opinieSAITC)) || (Boolean.TRUE.equals(opinieSJCREP)));]]></bpmn2:conditionExpression>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="Flow_OpB2" sourceRef="Script_Back" targetRef="Gw_Repart_Join"/>
+    <bpmn2:sequenceFlow id="Flow_30" sourceRef="Task_Alte" targetRef="Gw_Cab_In"/>
+    <bpmn2:sequenceFlow id="Flow_Cab_In" sourceRef="Gw_Cab_In" targetRef="Task_Cabinet"/>
+    <bpmn2:sequenceFlow id="Flow_31" sourceRef="Task_Cabinet" targetRef="Gw_Cabinet"/>
+    <bpmn2:sequenceFlow id="Flow_C_Redist" sourceRef="Gw_Cabinet" targetRef="Gw_Repart_Join">
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="Flow_C_Redist_cond" language="http://www.java.com/java"><![CDATA[return "REDISTRIBUIRE".equals(decizieCabinet);]]></bpmn2:conditionExpression>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="Flow_C_Cond" sourceRef="Gw_Cabinet" targetRef="Task_Conducere">
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="Flow_C_Cond_cond" language="http://www.java.com/java"><![CDATA[return !(("REDISTRIBUIRE".equals(decizieCabinet)));]]></bpmn2:conditionExpression>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="Flow_34" sourceRef="Task_Conducere" targetRef="Gw_Cab_In"/>
+    <bpmn2:sequenceFlow id="Flow_40" sourceRef="Gw_Semnare_Join" targetRef="Task_Semnare"/>
+    <bpmn2:sequenceFlow id="Flow_41" sourceRef="Task_Semnare" targetRef="Gw_Semnare"/>
+    <bpmn2:sequenceFlow id="Flow_Sem_Ok" sourceRef="Gw_Semnare" targetRef="Task_Expediere">
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="Flow_Sem_Ok_cond" language="http://www.java.com/java"><![CDATA[return !(("RETURNAT".equals(decizieSemnare)));]]></bpmn2:conditionExpression>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="Flow_Sem_Ret" sourceRef="Gw_Semnare" targetRef="Gw_Repart_Join">
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="Flow_Sem_Ret_cond" language="http://www.java.com/java"><![CDATA[return "RETURNAT".equals(decizieSemnare);]]></bpmn2:conditionExpression>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="Flow_42" sourceRef="Task_Expediere" targetRef="EndEvent_1"/>
+  </bpmn2:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="flux_formular_petitii">
+      <bpmndi:BPMNShape id="StartEvent_1_di" bpmnElement="StartEvent_1">
+        <dc:Bounds x="60" y="432" width="36" height="36"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_Inregistrare_di" bpmnElement="Task_Inregistrare">
+        <dc:Bounds x="140" y="420" width="180" height="60"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gw_Repart_Join_di" bpmnElement="Gw_Repart_Join">
+        <dc:Bounds x="360" y="432" width="56" height="56"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gw_Repart_di" bpmnElement="Gw_Repart">
+        <dc:Bounds x="450" y="432" width="56" height="56"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gw_DGAL_In_di" bpmnElement="Gw_DGAL_In">
+        <dc:Bounds x="560" y="162" width="56" height="56"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_DGAL_di" bpmnElement="Task_DGAL">
+        <dc:Bounds x="640" y="160" width="140" height="60"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gw_DGAL_di" bpmnElement="Gw_DGAL">
+        <dc:Bounds x="780" y="162" width="56" height="56"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_DAL_di" bpmnElement="Task_DAL">
+        <dc:Bounds x="900" y="100" width="140" height="44"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_SRMRI_di" bpmnElement="Task_SRMRI">
+        <dc:Bounds x="900" y="168" width="140" height="44"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_PCUEL_di" bpmnElement="Task_PCUEL">
+        <dc:Bounds x="900" y="236" width="140" height="44"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gw_DGAL_Join_di" bpmnElement="Gw_DGAL_Join">
+        <dc:Bounds x="1080" y="162" width="56" height="56"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gw_Sub_di" bpmnElement="Gw_Sub">
+        <dc:Bounds x="1200" y="162" width="56" height="56"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_SRUE_di" bpmnElement="Task_SRUE">
+        <dc:Bounds x="580" y="320" width="140" height="60"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_SAITC_di" bpmnElement="Task_SAITC">
+        <dc:Bounds x="580" y="440" width="140" height="60"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_SJCREP_di" bpmnElement="Task_SJCREP">
+        <dc:Bounds x="580" y="560" width="140" height="60"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gw_Dir_Join_di" bpmnElement="Gw_Dir_Join">
+        <dc:Bounds x="1200" y="432" width="56" height="56"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gw_Dir_di" bpmnElement="Gw_Dir">
+        <dc:Bounds x="1290" y="432" width="56" height="56"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gw_OpS_di" bpmnElement="Gw_OpS">
+        <dc:Bounds x="1472" y="980" width="56" height="56"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Op_DGAL_di" bpmnElement="Op_DGAL">
+        <dc:Bounds x="1600" y="860" width="140" height="60"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Op_SRUE_di" bpmnElement="Op_SRUE">
+        <dc:Bounds x="1600" y="940" width="140" height="60"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Op_SAITC_di" bpmnElement="Op_SAITC">
+        <dc:Bounds x="1600" y="1020" width="140" height="60"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Op_SJCREP_di" bpmnElement="Op_SJCREP">
+        <dc:Bounds x="1600" y="1100" width="140" height="60"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gw_OpJ_di" bpmnElement="Gw_OpJ">
+        <dc:Bounds x="1800" y="980" width="56" height="56"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gw_Back_In_di" bpmnElement="Gw_Back_In">
+        <dc:Bounds x="1890" y="980" width="56" height="56"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Script_Back_di" bpmnElement="Script_Back">
+        <dc:Bounds x="1980" y="978" width="180" height="60"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_Alte_di" bpmnElement="Task_Alte">
+        <dc:Bounds x="580" y="760" width="140" height="60"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gw_Cab_In_di" bpmnElement="Gw_Cab_In">
+        <dc:Bounds x="740" y="762" width="56" height="56"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_Cabinet_di" bpmnElement="Task_Cabinet">
+        <dc:Bounds x="820" y="760" width="160" height="60"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gw_Cabinet_di" bpmnElement="Gw_Cabinet">
+        <dc:Bounds x="1000" y="762" width="56" height="56"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_Conducere_di" bpmnElement="Task_Conducere">
+        <dc:Bounds x="1120" y="760" width="180" height="60"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gw_Semnare_Join_di" bpmnElement="Gw_Semnare_Join">
+        <dc:Bounds x="1400" y="432" width="56" height="56"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_Semnare_di" bpmnElement="Task_Semnare">
+        <dc:Bounds x="1500" y="420" width="200" height="60"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gw_Semnare_di" bpmnElement="Gw_Semnare">
+        <dc:Bounds x="1760" y="432" width="56" height="56"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_Expediere_di" bpmnElement="Task_Expediere">
+        <dc:Bounds x="1860" y="420" width="180" height="60"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EndEvent_1_di" bpmnElement="EndEvent_1">
+        <dc:Bounds x="2100" y="432" width="36" height="36"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_01_di" bpmnElement="Flow_01" sourceElement="StartEvent_1_di" targetElement="Task_Inregistrare_di">
+        <di:waypoint x="96" y="450"/>
+        <di:waypoint x="140" y="450"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_02_di" bpmnElement="Flow_02" sourceElement="Task_Inregistrare_di" targetElement="Gw_Repart_Join_di">
+        <di:waypoint x="320" y="456"/>
+        <di:waypoint x="360" y="458"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_03_di" bpmnElement="Flow_03" sourceElement="Gw_Repart_Join_di" targetElement="Gw_Repart_di">
+        <di:waypoint x="416" y="460"/>
+        <di:waypoint x="450" y="460"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_R_DGAL_di" bpmnElement="Flow_R_DGAL" sourceElement="Gw_Repart_di" targetElement="Gw_DGAL_In_di">
+        <di:waypoint x="489" y="432"/>
+        <di:waypoint x="577" y="218"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_R_SRUE_di" bpmnElement="Flow_R_SRUE" sourceElement="Gw_Repart_di" targetElement="Task_SRUE_di">
+        <di:waypoint x="506" y="442"/>
+        <di:waypoint x="603" y="380"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_R_SAITC_di" bpmnElement="Flow_R_SAITC" sourceElement="Gw_Repart_di" targetElement="Task_SAITC_di">
+        <di:waypoint x="506" y="462"/>
+        <di:waypoint x="580" y="466"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_R_SJCREP_di" bpmnElement="Flow_R_SJCREP" sourceElement="Gw_Repart_di" targetElement="Task_SJCREP_di">
+        <di:waypoint x="506" y="481"/>
+        <di:waypoint x="610" y="560"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_R_Alte_di" bpmnElement="Flow_R_Alte" sourceElement="Gw_Repart_di" targetElement="Task_Alte_di">
+        <di:waypoint x="478" y="488"/>
+        <di:waypoint x="650" y="760"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_10_di" bpmnElement="Flow_10" sourceElement="Task_DGAL_di" targetElement="Gw_DGAL_di">
+        <di:waypoint x="780" y="190"/>
+        <di:waypoint x="780" y="190"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_D_DAL_di" bpmnElement="Flow_D_DAL" sourceElement="Gw_DGAL_di" targetElement="Task_DAL_di">
+        <di:waypoint x="836" y="178"/>
+        <di:waypoint x="918" y="144"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_D_SRMRI_di" bpmnElement="Flow_D_SRMRI" sourceElement="Gw_DGAL_di" targetElement="Task_SRMRI_di">
+        <di:waypoint x="836" y="190"/>
+        <di:waypoint x="900" y="190"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_D_PCUEL_di" bpmnElement="Flow_D_PCUEL" sourceElement="Gw_DGAL_di" targetElement="Task_PCUEL_di">
+        <di:waypoint x="836" y="202"/>
+        <di:waypoint x="918" y="236"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_D_Direct_di" bpmnElement="Flow_D_Direct" sourceElement="Gw_DGAL_di" targetElement="Gw_DGAL_Join_di">
+        <di:waypoint x="808" y="162"/>
+        <di:waypoint x="808" y="70"/>
+        <di:waypoint x="1108" y="70"/>
+        <di:waypoint x="1108" y="162"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_D_Semnare_di" bpmnElement="Flow_D_Semnare" sourceElement="Gw_DGAL_di" targetElement="Gw_Semnare_Join_di">
+        <di:waypoint x="808" y="218"/>
+        <di:waypoint x="808" y="320"/>
+        <di:waypoint x="1428" y="320"/>
+        <di:waypoint x="1428" y="432"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_14_di" bpmnElement="Flow_14" sourceElement="Task_DAL_di" targetElement="Gw_DGAL_Join_di">
+        <di:waypoint x="1015" y="144"/>
+        <di:waypoint x="1080" y="176"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_15_di" bpmnElement="Flow_15" sourceElement="Task_SRMRI_di" targetElement="Gw_DGAL_Join_di">
+        <di:waypoint x="1040" y="190"/>
+        <di:waypoint x="1080" y="190"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_16_di" bpmnElement="Flow_16" sourceElement="Task_PCUEL_di" targetElement="Gw_DGAL_Join_di">
+        <di:waypoint x="1015" y="236"/>
+        <di:waypoint x="1080" y="204"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_17_di" bpmnElement="Flow_17" sourceElement="Gw_DGAL_Join_di" targetElement="Gw_Sub_di">
+        <di:waypoint x="1136" y="190"/>
+        <di:waypoint x="1200" y="190"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_S_Inainte_di" bpmnElement="Flow_S_Inainte" sourceElement="Gw_Sub_di" targetElement="Gw_Dir_Join_di">
+        <di:waypoint x="1228" y="218"/>
+        <di:waypoint x="1228" y="432"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_DGAL_In_di" bpmnElement="Flow_DGAL_In" sourceElement="Gw_DGAL_In_di" targetElement="Task_DGAL_di">
+        <di:waypoint x="616" y="190"/>
+        <di:waypoint x="640" y="190"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_S_Inapoi_di" bpmnElement="Flow_S_Inapoi" sourceElement="Gw_Sub_di" targetElement="Gw_DGAL_In_di">
+        <di:waypoint x="1228" y="162"/>
+        <di:waypoint x="1228" y="30"/>
+        <di:waypoint x="588" y="30"/>
+        <di:waypoint x="588" y="162"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_18_di" bpmnElement="Flow_18" sourceElement="Task_SRUE_di" targetElement="Gw_Dir_Join_di">
+        <di:waypoint x="720" y="350"/>
+        <di:waypoint x="1200" y="460"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_19_di" bpmnElement="Flow_19" sourceElement="Task_SAITC_di" targetElement="Gw_Dir_Join_di">
+        <di:waypoint x="720" y="470"/>
+        <di:waypoint x="1200" y="460"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_20_di" bpmnElement="Flow_20" sourceElement="Task_SJCREP_di" targetElement="Gw_Dir_Join_di">
+        <di:waypoint x="720" y="590"/>
+        <di:waypoint x="1200" y="460"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_21_di" bpmnElement="Flow_21" sourceElement="Gw_Dir_Join_di" targetElement="Gw_Dir_di">
+        <di:waypoint x="1256" y="460"/>
+        <di:waypoint x="1290" y="460"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_Dir_Transfer_di" bpmnElement="Flow_Dir_Transfer" sourceElement="Gw_Dir_di" targetElement="Gw_Repart_Join_di">
+        <di:waypoint x="1318" y="488"/>
+        <di:waypoint x="1318" y="660"/>
+        <di:waypoint x="388" y="660"/>
+        <di:waypoint x="388" y="488"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_Dir_Raspuns_di" bpmnElement="Flow_Dir_Raspuns" sourceElement="Gw_Dir_di" targetElement="Gw_Semnare_Join_di">
+        <di:waypoint x="1346" y="460"/>
+        <di:waypoint x="1400" y="460"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_Dir_Opinie_di" bpmnElement="Flow_Dir_Opinie" sourceElement="Gw_Dir_di" targetElement="Gw_OpS_di">
+        <di:waypoint x="1318" y="488"/>
+        <di:waypoint x="1318" y="560"/>
+        <di:waypoint x="1500" y="560"/>
+        <di:waypoint x="1500" y="980"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_Op1_di" bpmnElement="Flow_Op1" sourceElement="Gw_OpS_di" targetElement="Op_DGAL_di">
+        <di:waypoint x="1528" y="989"/>
+        <di:waypoint x="1627" y="920"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_Op2_di" bpmnElement="Flow_Op2" sourceElement="Gw_OpS_di" targetElement="Op_SRUE_di">
+        <di:waypoint x="1528" y="1002"/>
+        <di:waypoint x="1600" y="986"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_Op3_di" bpmnElement="Flow_Op3" sourceElement="Gw_OpS_di" targetElement="Op_SAITC_di">
+        <di:waypoint x="1528" y="1015"/>
+        <di:waypoint x="1600" y="1033"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_Op4_di" bpmnElement="Flow_Op4" sourceElement="Gw_OpS_di" targetElement="Op_SJCREP_di">
+        <di:waypoint x="1528" y="1028"/>
+        <di:waypoint x="1628" y="1100"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_OpJ1_di" bpmnElement="Flow_OpJ1" sourceElement="Op_DGAL_di" targetElement="Gw_OpJ_di">
+        <di:waypoint x="1710" y="920"/>
+        <di:waypoint x="1800" y="987"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_OpJ2_di" bpmnElement="Flow_OpJ2" sourceElement="Op_SRUE_di" targetElement="Gw_OpJ_di">
+        <di:waypoint x="1740" y="987"/>
+        <di:waypoint x="1800" y="1001"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_OpJ3_di" bpmnElement="Flow_OpJ3" sourceElement="Op_SAITC_di" targetElement="Gw_OpJ_di">
+        <di:waypoint x="1740" y="1031"/>
+        <di:waypoint x="1800" y="1015"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_OpJ4_di" bpmnElement="Flow_OpJ4" sourceElement="Op_SJCREP_di" targetElement="Gw_OpJ_di">
+        <di:waypoint x="1709" y="1100"/>
+        <di:waypoint x="1800" y="1030"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_OpB1_di" bpmnElement="Flow_OpB1" sourceElement="Gw_OpJ_di" targetElement="Gw_Back_In_di">
+        <di:waypoint x="1856" y="1008"/>
+        <di:waypoint x="1890" y="1008"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_Back_In_di" bpmnElement="Flow_Back_In" sourceElement="Gw_Back_In_di" targetElement="Script_Back_di">
+        <di:waypoint x="1946" y="1008"/>
+        <di:waypoint x="1980" y="1008"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_Op_None_di" bpmnElement="Flow_Op_None" sourceElement="Gw_OpS_di" targetElement="Gw_Back_In_di">
+        <di:waypoint x="1500" y="1036"/>
+        <di:waypoint x="1500" y="1150"/>
+        <di:waypoint x="1918" y="1150"/>
+        <di:waypoint x="1918" y="1036"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_OpB2_di" bpmnElement="Flow_OpB2" sourceElement="Script_Back_di" targetElement="Gw_Repart_Join_di">
+        <di:waypoint x="2160" y="1008"/>
+        <di:waypoint x="2220" y="1008"/>
+        <di:waypoint x="2220" y="1200"/>
+        <di:waypoint x="388" y="1200"/>
+        <di:waypoint x="388" y="488"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_30_di" bpmnElement="Flow_30" sourceElement="Task_Alte_di" targetElement="Gw_Cab_In_di">
+        <di:waypoint x="720" y="790"/>
+        <di:waypoint x="740" y="790"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_Cab_In_di" bpmnElement="Flow_Cab_In" sourceElement="Gw_Cab_In_di" targetElement="Task_Cabinet_di">
+        <di:waypoint x="796" y="790"/>
+        <di:waypoint x="820" y="790"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_31_di" bpmnElement="Flow_31" sourceElement="Task_Cabinet_di" targetElement="Gw_Cabinet_di">
+        <di:waypoint x="980" y="790"/>
+        <di:waypoint x="1000" y="790"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_C_Redist_di" bpmnElement="Flow_C_Redist" sourceElement="Gw_Cabinet_di" targetElement="Gw_Repart_Join_di">
+        <di:waypoint x="1028" y="762"/>
+        <di:waypoint x="1028" y="700"/>
+        <di:waypoint x="410" y="700"/>
+        <di:waypoint x="410" y="488"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_C_Cond_di" bpmnElement="Flow_C_Cond" sourceElement="Gw_Cabinet_di" targetElement="Task_Conducere_di">
+        <di:waypoint x="1056" y="790"/>
+        <di:waypoint x="1120" y="790"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_34_di" bpmnElement="Flow_34" sourceElement="Task_Conducere_di" targetElement="Gw_Cab_In_di">
+        <di:waypoint x="1210" y="820"/>
+        <di:waypoint x="1210" y="870"/>
+        <di:waypoint x="768" y="870"/>
+        <di:waypoint x="768" y="818"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_40_di" bpmnElement="Flow_40" sourceElement="Gw_Semnare_Join_di" targetElement="Task_Semnare_di">
+        <di:waypoint x="1456" y="458"/>
+        <di:waypoint x="1500" y="456"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_41_di" bpmnElement="Flow_41" sourceElement="Task_Semnare_di" targetElement="Gw_Semnare_di">
+        <di:waypoint x="1700" y="455"/>
+        <di:waypoint x="1760" y="459"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_Sem_Ok_di" bpmnElement="Flow_Sem_Ok" sourceElement="Gw_Semnare_di" targetElement="Task_Expediere_di">
+        <di:waypoint x="1816" y="458"/>
+        <di:waypoint x="1860" y="456"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_Sem_Ret_di" bpmnElement="Flow_Sem_Ret" sourceElement="Gw_Semnare_di" targetElement="Gw_Repart_Join_di">
+        <di:waypoint x="1788" y="488"/>
+        <di:waypoint x="1788" y="730"/>
+        <di:waypoint x="388" y="730"/>
+        <di:waypoint x="388" y="488"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_42_di" bpmnElement="Flow_42" sourceElement="Task_Expediere_di" targetElement="EndEvent_1_di">
+        <di:waypoint x="2040" y="450"/>
+        <di:waypoint x="2100" y="450"/>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn2:definitions>
